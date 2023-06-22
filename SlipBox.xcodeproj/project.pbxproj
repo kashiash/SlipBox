@@ -1,0 +1,638 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		76485E782A44DC6000F53AAE /* SlipBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76485E772A44DC6000F53AAE /* SlipBoxApp.swift */; };
+		76485E7A2A44DC6000F53AAE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76485E792A44DC6000F53AAE /* Persistence.swift */; };
+		76485E7D2A44DC6000F53AAE /* SlipBox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76485E7B2A44DC6000F53AAE /* SlipBox.xcdatamodeld */; };
+		76485E7F2A44DC6000F53AAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76485E7E2A44DC6000F53AAE /* ContentView.swift */; };
+		76485E812A44DC6100F53AAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76485E802A44DC6100F53AAE /* Assets.xcassets */; };
+		76485E852A44DC6100F53AAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76485E842A44DC6100F53AAE /* Preview Assets.xcassets */; };
+		76485E8F2A44DC6100F53AAE /* SlipBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76485E8E2A44DC6100F53AAE /* SlipBoxTests.swift */; };
+		76485E992A44DC6100F53AAE /* SlipBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76485E982A44DC6100F53AAE /* SlipBoxUITests.swift */; };
+		76485E9B2A44DC6100F53AAE /* SlipBoxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76485E9A2A44DC6100F53AAE /* SlipBoxUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		76485E8B2A44DC6100F53AAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76485E6C2A44DC6000F53AAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76485E732A44DC6000F53AAE;
+			remoteInfo = SlipBox;
+		};
+		76485E952A44DC6100F53AAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76485E6C2A44DC6000F53AAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76485E732A44DC6000F53AAE;
+			remoteInfo = SlipBox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		76485E742A44DC6000F53AAE /* SlipBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlipBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		76485E772A44DC6000F53AAE /* SlipBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipBoxApp.swift; sourceTree = "<group>"; };
+		76485E792A44DC6000F53AAE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		76485E7C2A44DC6000F53AAE /* SlipBox.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SlipBox.xcdatamodel; sourceTree = "<group>"; };
+		76485E7E2A44DC6000F53AAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		76485E802A44DC6100F53AAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76485E822A44DC6100F53AAE /* SlipBox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SlipBox.entitlements; sourceTree = "<group>"; };
+		76485E842A44DC6100F53AAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		76485E8A2A44DC6100F53AAE /* SlipBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlipBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		76485E8E2A44DC6100F53AAE /* SlipBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipBoxTests.swift; sourceTree = "<group>"; };
+		76485E942A44DC6100F53AAE /* SlipBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlipBoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		76485E982A44DC6100F53AAE /* SlipBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipBoxUITests.swift; sourceTree = "<group>"; };
+		76485E9A2A44DC6100F53AAE /* SlipBoxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipBoxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76485E712A44DC6000F53AAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76485E872A44DC6100F53AAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76485E912A44DC6100F53AAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		76485E6B2A44DC6000F53AAE = {
+			isa = PBXGroup;
+			children = (
+				76485E762A44DC6000F53AAE /* SlipBox */,
+				76485E8D2A44DC6100F53AAE /* SlipBoxTests */,
+				76485E972A44DC6100F53AAE /* SlipBoxUITests */,
+				76485E752A44DC6000F53AAE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		76485E752A44DC6000F53AAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76485E742A44DC6000F53AAE /* SlipBox.app */,
+				76485E8A2A44DC6100F53AAE /* SlipBoxTests.xctest */,
+				76485E942A44DC6100F53AAE /* SlipBoxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76485E762A44DC6000F53AAE /* SlipBox */ = {
+			isa = PBXGroup;
+			children = (
+				76485E772A44DC6000F53AAE /* SlipBoxApp.swift */,
+				76485E792A44DC6000F53AAE /* Persistence.swift */,
+				76485E7E2A44DC6000F53AAE /* ContentView.swift */,
+				76485E802A44DC6100F53AAE /* Assets.xcassets */,
+				76485E822A44DC6100F53AAE /* SlipBox.entitlements */,
+				76485E7B2A44DC6000F53AAE /* SlipBox.xcdatamodeld */,
+				76485E832A44DC6100F53AAE /* Preview Content */,
+			);
+			path = SlipBox;
+			sourceTree = "<group>";
+		};
+		76485E832A44DC6100F53AAE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				76485E842A44DC6100F53AAE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		76485E8D2A44DC6100F53AAE /* SlipBoxTests */ = {
+			isa = PBXGroup;
+			children = (
+				76485E8E2A44DC6100F53AAE /* SlipBoxTests.swift */,
+			);
+			path = SlipBoxTests;
+			sourceTree = "<group>";
+		};
+		76485E972A44DC6100F53AAE /* SlipBoxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				76485E982A44DC6100F53AAE /* SlipBoxUITests.swift */,
+				76485E9A2A44DC6100F53AAE /* SlipBoxUITestsLaunchTests.swift */,
+			);
+			path = SlipBoxUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76485E732A44DC6000F53AAE /* SlipBox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76485E9E2A44DC6100F53AAE /* Build configuration list for PBXNativeTarget "SlipBox" */;
+			buildPhases = (
+				76485E702A44DC6000F53AAE /* Sources */,
+				76485E712A44DC6000F53AAE /* Frameworks */,
+				76485E722A44DC6000F53AAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SlipBox;
+			productName = SlipBox;
+			productReference = 76485E742A44DC6000F53AAE /* SlipBox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		76485E892A44DC6100F53AAE /* SlipBoxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76485EA12A44DC6100F53AAE /* Build configuration list for PBXNativeTarget "SlipBoxTests" */;
+			buildPhases = (
+				76485E862A44DC6100F53AAE /* Sources */,
+				76485E872A44DC6100F53AAE /* Frameworks */,
+				76485E882A44DC6100F53AAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76485E8C2A44DC6100F53AAE /* PBXTargetDependency */,
+			);
+			name = SlipBoxTests;
+			productName = SlipBoxTests;
+			productReference = 76485E8A2A44DC6100F53AAE /* SlipBoxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		76485E932A44DC6100F53AAE /* SlipBoxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76485EA42A44DC6100F53AAE /* Build configuration list for PBXNativeTarget "SlipBoxUITests" */;
+			buildPhases = (
+				76485E902A44DC6100F53AAE /* Sources */,
+				76485E912A44DC6100F53AAE /* Frameworks */,
+				76485E922A44DC6100F53AAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76485E962A44DC6100F53AAE /* PBXTargetDependency */,
+			);
+			name = SlipBoxUITests;
+			productName = SlipBoxUITests;
+			productReference = 76485E942A44DC6100F53AAE /* SlipBoxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		76485E6C2A44DC6000F53AAE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					76485E732A44DC6000F53AAE = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					76485E892A44DC6100F53AAE = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 76485E732A44DC6000F53AAE;
+					};
+					76485E932A44DC6100F53AAE = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 76485E732A44DC6000F53AAE;
+					};
+				};
+			};
+			buildConfigurationList = 76485E6F2A44DC6000F53AAE /* Build configuration list for PBXProject "SlipBox" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 76485E6B2A44DC6000F53AAE;
+			productRefGroup = 76485E752A44DC6000F53AAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76485E732A44DC6000F53AAE /* SlipBox */,
+				76485E892A44DC6100F53AAE /* SlipBoxTests */,
+				76485E932A44DC6100F53AAE /* SlipBoxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		76485E722A44DC6000F53AAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76485E852A44DC6100F53AAE /* Preview Assets.xcassets in Resources */,
+				76485E812A44DC6100F53AAE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76485E882A44DC6100F53AAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76485E922A44DC6100F53AAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76485E702A44DC6000F53AAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76485E782A44DC6000F53AAE /* SlipBoxApp.swift in Sources */,
+				76485E7A2A44DC6000F53AAE /* Persistence.swift in Sources */,
+				76485E7F2A44DC6000F53AAE /* ContentView.swift in Sources */,
+				76485E7D2A44DC6000F53AAE /* SlipBox.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76485E862A44DC6100F53AAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76485E8F2A44DC6100F53AAE /* SlipBoxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76485E902A44DC6100F53AAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76485E9B2A44DC6100F53AAE /* SlipBoxUITestsLaunchTests.swift in Sources */,
+				76485E992A44DC6100F53AAE /* SlipBoxUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		76485E8C2A44DC6100F53AAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76485E732A44DC6000F53AAE /* SlipBox */;
+			targetProxy = 76485E8B2A44DC6100F53AAE /* PBXContainerItemProxy */;
+		};
+		76485E962A44DC6100F53AAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76485E732A44DC6000F53AAE /* SlipBox */;
+			targetProxy = 76485E952A44DC6100F53AAE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		76485E9C2A44DC6100F53AAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		76485E9D2A44DC6100F53AAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		76485E9F2A44DC6100F53AAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SlipBox/SlipBox.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SlipBox/Preview Content\"";
+				DEVELOPMENT_TEAM = PFVCA649R3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kashiash.SlipBox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		76485EA02A44DC6100F53AAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SlipBox/SlipBox.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SlipBox/Preview Content\"";
+				DEVELOPMENT_TEAM = PFVCA649R3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kashiash.SlipBox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		76485EA22A44DC6100F53AAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PFVCA649R3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kashiash.SlipBoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlipBox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SlipBox";
+			};
+			name = Debug;
+		};
+		76485EA32A44DC6100F53AAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PFVCA649R3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kashiash.SlipBoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlipBox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SlipBox";
+			};
+			name = Release;
+		};
+		76485EA52A44DC6100F53AAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PFVCA649R3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kashiash.SlipBoxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SlipBox;
+			};
+			name = Debug;
+		};
+		76485EA62A44DC6100F53AAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PFVCA649R3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kashiash.SlipBoxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SlipBox;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76485E6F2A44DC6000F53AAE /* Build configuration list for PBXProject "SlipBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76485E9C2A44DC6100F53AAE /* Debug */,
+				76485E9D2A44DC6100F53AAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76485E9E2A44DC6100F53AAE /* Build configuration list for PBXNativeTarget "SlipBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76485E9F2A44DC6100F53AAE /* Debug */,
+				76485EA02A44DC6100F53AAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76485EA12A44DC6100F53AAE /* Build configuration list for PBXNativeTarget "SlipBoxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76485EA22A44DC6100F53AAE /* Debug */,
+				76485EA32A44DC6100F53AAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76485EA42A44DC6100F53AAE /* Build configuration list for PBXNativeTarget "SlipBoxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76485EA52A44DC6100F53AAE /* Debug */,
+				76485EA62A44DC6100F53AAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		76485E7B2A44DC6000F53AAE /* SlipBox.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				76485E7C2A44DC6000F53AAE /* SlipBox.xcdatamodel */,
+			);
+			currentVersion = 76485E7C2A44DC6000F53AAE /* SlipBox.xcdatamodel */;
+			path = SlipBox.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 76485E6C2A44DC6000F53AAE /* Project object */;
+}
