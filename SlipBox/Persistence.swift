@@ -84,8 +84,10 @@ class PersistenceController : ObservableObject {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for index in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date() + TimeInterval(index)
+           // let newNote = Note(context: viewContext)
+           // newNote.title = "new note"
+            let newNote = Note(title: "new note \(index)",context: viewContext)
+            newNote.creationDate = Date() + TimeInterval(index)
         }
         return result
     }()
