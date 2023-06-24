@@ -2,7 +2,7 @@
 
 Zarzadzanie notakami i i wdzą
 
-notaki do kursu : https://www.swiftyplace.com/courses/swiftui-and-core-data/dashboard
+notaki do kursu : [https://www.swiftyplace.com/courses/swiftui-and-core-data/dashboard](https://www.swiftyplace.com/courses/swiftui-and-core-data)
 
 [1.1 Nowy projekt](1.1_NewProject.md)
 
