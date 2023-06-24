@@ -9,13 +9,13 @@ import CoreData
 import Combine
 import CloudKit
 
-class PersistenceController {
+class PersistenceController : ObservableObject {
     static let shared = PersistenceController()
-
-
 
     let container: NSPersistentCloudKitContainer
     var subscriptions = Set<AnyCancellable>()
+
+    @Published var syncErrorMessage: String? = nil
 
     init(inMemory: Bool = false) {
         container = NSPersistentCloudKitContainer(name: "SlipBox")
@@ -33,7 +33,7 @@ class PersistenceController {
         })
         container.viewContext.automaticallyMergesChangesFromParent = true
         container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
-
+        checkSyncStatus()
     }
     func setupSchemaSync() {
         let options = NSPersistentCloudKitContainerSchemaInitializationOptions()
@@ -55,6 +55,23 @@ class PersistenceController {
                     case .setup: print("cloudkit event - setup finished")
                     case .import: print("cloudkit event - import finished")
                     case .export: print("cloudkit event - export finished")
+                    @unknown default:
+                       print("cloud kit event - add new type")
+                    }
+                    if event.succeeded {
+                        print("cloudkit event - succesed")
+                    } else {
+                        print("cloudkit event - not succesed")
+                    }
+                    if let error = event.error as? CKError {
+                        print("cloudkit event - error \(error.localizedDescription)")
+                        switch error.code {
+                        case .quotaExceeded:
+                            self.syncErrorMessage  = "quota exceeded, please free up some space on iCloud"
+                           // print("quota exceeded, please free up some space on iCloud")
+                        @unknown default:
+                            print("Ask chat gpt what happens")
+                        }
                     }
                 }
 
