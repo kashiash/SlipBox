@@ -10,12 +10,12 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-
+    
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Note.creationDate, ascending: true)],
         animation: .default)
     private var notes: FetchedResults<Note>
-
+    
     var body: some View {
         NavigationView {
             List {
@@ -35,16 +35,16 @@ struct ContentView: View {
                     }
                 }
             }
-
+            
         }
     }
-
+    
     private func addNote() {
-            let newNote = Note(title: "new note",context: viewContext)
+        let newNote = Note(title: "new note",context: viewContext)
     }
-
+    
     private func deleteItems(offsets: IndexSet) {
-            offsets.map { notes[$0] }.forEach(viewContext.delete)
+        offsets.map { notes[$0] }.forEach(viewContext.delete)
     }
 }
 
