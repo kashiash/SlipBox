@@ -32,4 +32,12 @@ extension Note {
         request.predicate = NSPredicate(format: "TRUEPREDICATE")
         return request
     }
+
+    static func fetch(_ predicate: NSPredicate = .all)  -> NSFetchRequest<Note> {
+        let request = NSFetchRequest<Note>(entityName: "Note")
+        request.sortDescriptors = [NSSortDescriptor(keyPath: \Note.creationDate, ascending: true)]
+        request.predicate = predicate
+
+        return request
+    }
 }

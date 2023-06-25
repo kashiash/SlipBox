@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		762CB2152A48D86700F04B3F /* NoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762CB2142A48D86700F04B3F /* NoteDetailView.swift */; };
+		762CB2182A48DDE300F04B3F /* NSPredicate+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762CB2172A48DDE300F04B3F /* NSPredicate+Helper.swift */; };
 		76485E782A44DC6000F53AAE /* SlipBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76485E772A44DC6000F53AAE /* SlipBoxApp.swift */; };
 		76485E7A2A44DC6000F53AAE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76485E792A44DC6000F53AAE /* Persistence.swift */; };
 		76485E7D2A44DC6000F53AAE /* SlipBox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76485E7B2A44DC6000F53AAE /* SlipBox.xcdatamodeld */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		762CB2142A48D86700F04B3F /* NoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailView.swift; sourceTree = "<group>"; };
+		762CB2172A48DDE300F04B3F /* NSPredicate+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+Helper.swift"; sourceTree = "<group>"; };
 		76485E742A44DC6000F53AAE /* SlipBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlipBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76485E772A44DC6000F53AAE /* SlipBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipBoxApp.swift; sourceTree = "<group>"; };
 		76485E792A44DC6000F53AAE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -81,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		762CB2162A48DD8900F04B3F /* CoreDataHelper */ = {
+			isa = PBXGroup;
+			children = (
+				76485E792A44DC6000F53AAE /* Persistence.swift */,
+				762CB2172A48DDE300F04B3F /* NSPredicate+Helper.swift */,
+			);
+			path = CoreDataHelper;
+			sourceTree = "<group>";
+		};
 		76485E6B2A44DC6000F53AAE = {
 			isa = PBXGroup;
 			children = (
@@ -104,10 +115,10 @@
 		76485E762A44DC6000F53AAE /* SlipBox */ = {
 			isa = PBXGroup;
 			children = (
+				762CB2162A48DD8900F04B3F /* CoreDataHelper */,
 				766CB5D42A479F2900FEF983 /* Model */,
 				76485EA72A461F5D00F53AAE /* Info.plist */,
 				76485E772A44DC6000F53AAE /* SlipBoxApp.swift */,
-				76485E792A44DC6000F53AAE /* Persistence.swift */,
 				76485E7E2A44DC6000F53AAE /* ContentView.swift */,
 				76485E802A44DC6100F53AAE /* Assets.xcassets */,
 				76485E822A44DC6100F53AAE /* SlipBox.entitlements */,
@@ -284,6 +295,7 @@
 				76485E782A44DC6000F53AAE /* SlipBoxApp.swift in Sources */,
 				76485E7A2A44DC6000F53AAE /* Persistence.swift in Sources */,
 				766CB5D62A479FD500FEF983 /* Note+Helper.swift in Sources */,
+				762CB2182A48DDE300F04B3F /* NSPredicate+Helper.swift in Sources */,
 				762CB2152A48D86700F04B3F /* NoteDetailView.swift in Sources */,
 				76485E7F2A44DC6000F53AAE /* ContentView.swift in Sources */,
 				76485E7D2A44DC6000F53AAE /* SlipBox.xcdatamodeld in Sources */,

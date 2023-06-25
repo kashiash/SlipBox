@@ -10,10 +10,12 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(fetchRequest: Note.fetch(.all))
+
+//    @FetchRequest(
+//        sortDescriptors: [NSSortDescriptor(keyPath: \Note.creationDate, ascending: true)],
+//        animation: .default)
     
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Note.creationDate, ascending: true)],
-        animation: .default)
     private var notes: FetchedResults<Note>
     
     var body: some View {
