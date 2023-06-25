@@ -10,3 +10,5 @@ notaki do kursu : [https://www.swiftyplace.com/courses/swiftui-and-core-data/das
 
 [1.3_Core Data Stack](1.3_CoredataStack.md):
 
+[1.4_Note Model + CRUD](1.4_NoteModel.md):
+
