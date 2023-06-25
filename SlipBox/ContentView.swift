@@ -29,41 +29,22 @@ struct ContentView: View {
                 .onDelete(perform: deleteItems)
             }
             .toolbar {
-#if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-#endif
                 ToolbarItem {
-                    Button(action: addItem) {
+                    Button(action: addNote) {
                         Label("Add Item", systemImage: "plus")
                     }
                 }
             }
-            Text("Select an item")
+
         }
     }
 
-    private func addItem() {
-        withAnimation {
+    private func addNote() {
             let newNote = Note(title: "new note",context: viewContext)
-            newNote.creationDate = Date()
-        }
     }
 
     private func deleteItems(offsets: IndexSet) {
-        withAnimation {
             offsets.map { notes[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
     }
 }
 
