@@ -26,4 +26,10 @@ extension Note {
     public override func awakeFromInsert() {
         self.creationDate = Date()
     }
+    func fetch()  -> NSFetchRequest<Note> {
+        let request = NSFetchRequest<Note>(entityName: "Note")
+        request.sortDescriptors = [NSSortDescriptor(keyPath: \Note.creationDate, ascending: true)]
+        request.predicate = NSPredicate(format: "TRUEPREDICATE")
+        return request
+    }
 }

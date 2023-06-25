@@ -21,9 +21,12 @@ struct ContentView: View {
             List {
                 ForEach(notes) { note in
                     NavigationLink {
-                        Text("Note at \(note.creationDate!, formatter: itemFormatter)")
+                        NoteDetailView(note: note)
                     } label: {
-                        Text(note.creationDate!, formatter: itemFormatter)
+                        VStack{
+                            Text(note.title ?? "no tile")
+                            Text(note.creationDate!, formatter: itemFormatter)
+                        }
                     }
                 }
                 .onDelete(perform: deleteItems)
