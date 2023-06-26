@@ -10,6 +10,15 @@ import CoreData
 
 extension Note {
 
+    var title: String {
+        get {
+            self.title_ ?? ""
+        }
+        set {
+            self.title_ = newValue
+        }
+    }
+
     convenience init (title: String, context:NSManagedObjectContext) {
         self.init(context: context)
         self.title = title
