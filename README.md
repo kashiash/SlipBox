@@ -1,8 +1,12 @@
 # SlipBox
 
-Zarzadzanie notakami i i wdzą
+Zarzadzanie notakami i i wiedzą
 
 notaki do kursu : [https://www.swiftyplace.com/courses/swiftui-and-core-data/dashboard](https://www.swiftyplace.com/courses/swiftui-and-core-data)
+
+
+
+## Setting up project
 
 [1.1 Nowy projekt](docs/1.1_NewProject.md)
 
@@ -13,6 +17,16 @@ notaki do kursu : [https://www.swiftyplace.com/courses/swiftui-and-core-data/das
 [1.4_Note Model + CRUD](docs/1.4_NoteModel.md)
 
 [1.5 Save note data](docs/1.5_SaveNoteData.md)
+
+
+
+## Unit tests
+
+
+
+[2.1 Introduction](docs/2.1_UnitTestsIntroduction.md)
+
+[2.2 Write your first test](docs/2.2_UnitTestFirst.md)
 
 
 
