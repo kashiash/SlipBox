@@ -26,7 +26,7 @@ struct ContentView: View {
                         NoteDetailView(note: note)
                     } label: {
                         VStack{
-                            Text(note.title ?? "no tile")
+                            Text(note.title)
                             Text(note.creationDate!, formatter: itemFormatter)
                         }
                     }
