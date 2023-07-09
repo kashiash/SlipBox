@@ -21,6 +21,7 @@
 		765E32D82A4F7FF50079227F /* NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E32D72A4F7FF50079227F /* NotesTests.swift */; };
 		766CB5D62A479FD500FEF983 /* Note+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766CB5D52A479FD500FEF983 /* Note+Helper.swift */; };
 		76835AA32A5AC5260008F1C2 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76835AA22A5AC5260008F1C2 /* Status.swift */; };
+		76835AA72A5AF9DF0008F1C2 /* TextViewIOSWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76835AA62A5AF9DF0008F1C2 /* TextViewIOSWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		765E32D72A4F7FF50079227F /* NotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTests.swift; sourceTree = "<group>"; };
 		766CB5D52A479FD500FEF983 /* Note+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+Helper.swift"; sourceTree = "<group>"; };
 		76835AA22A5AC5260008F1C2 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		76835AA62A5AF9DF0008F1C2 /* TextViewIOSWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewIOSWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		76485E762A44DC6000F53AAE /* SlipBox */ = {
 			isa = PBXGroup;
 			children = (
+				76835AA42A5AF9A30008F1C2 /* Views */,
 				762CB2162A48DD8900F04B3F /* CoreDataHelper */,
 				766CB5D42A479F2900FEF983 /* Model */,
 				76485EA72A461F5D00F53AAE /* Info.plist */,
@@ -128,7 +131,6 @@
 				76485E822A44DC6100F53AAE /* SlipBox.entitlements */,
 				76485E7B2A44DC6000F53AAE /* SlipBox.xcdatamodeld */,
 				76485E832A44DC6100F53AAE /* Preview Content */,
-				762CB2142A48D86700F04B3F /* NoteDetailView.swift */,
 			);
 			path = SlipBox;
 			sourceTree = "<group>";
@@ -166,6 +168,23 @@
 				76835AA22A5AC5260008F1C2 /* Status.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		76835AA42A5AF9A30008F1C2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				762CB2142A48D86700F04B3F /* NoteDetailView.swift */,
+				76835AA52A5AF9B30008F1C2 /* Note */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		76835AA52A5AF9B30008F1C2 /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				76835AA62A5AF9DF0008F1C2 /* TextViewIOSWrapper.swift */,
+			);
+			path = Note;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +323,7 @@
 				76835AA32A5AC5260008F1C2 /* Status.swift in Sources */,
 				762CB2182A48DDE300F04B3F /* NSPredicate+Helper.swift in Sources */,
 				762CB2152A48D86700F04B3F /* NoteDetailView.swift in Sources */,
+				76835AA72A5AF9DF0008F1C2 /* TextViewIOSWrapper.swift in Sources */,
 				76485E7F2A44DC6000F53AAE /* ContentView.swift in Sources */,
 				76485E7D2A44DC6000F53AAE /* SlipBox.xcdatamodeld in Sources */,
 			);

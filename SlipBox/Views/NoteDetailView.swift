@@ -16,12 +16,9 @@ struct NoteDetailView: View {
 
         VStack(spacing: 20){
             Text("Order \(Int(note.order))")
-            Text("Note detail view").font(.title)
-            HStack {
-                Text("Title:")
-                Text(note.title)
-            }
 
+            TextField("title", text: $note.title)
+                .textFieldStyle(.roundedBorder)
             Picker(selection: $note.status) {
                 ForEach(Status.allCases){ status in
                     Text(status.rawValue)
@@ -31,18 +28,7 @@ struct NoteDetailView: View {
                 Text("Note's status")
             }
             .pickerStyle(.segmented)
-
-            Button("Clean the tile") {
-                note.title = ""
-            }
-
-            TextField("title", text: $note.title)
-                .textFieldStyle(.roundedBorder)
-            Button("Delete Note"){
-                let context = note.managedObjectContext
-                context?.delete(note)
-            }
-            .foregroundColor(.pink)
+            TextViewIOSWrapper(note: note)
         }
         .padding()
         .onDisappear {
