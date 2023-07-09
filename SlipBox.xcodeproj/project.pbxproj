@@ -18,6 +18,7 @@
 		76485E8F2A44DC6100F53AAE /* SlipBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76485E8E2A44DC6100F53AAE /* SlipBoxTests.swift */; };
 		76485E992A44DC6100F53AAE /* SlipBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76485E982A44DC6100F53AAE /* SlipBoxUITests.swift */; };
 		76485E9B2A44DC6100F53AAE /* SlipBoxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76485E9A2A44DC6100F53AAE /* SlipBoxUITestsLaunchTests.swift */; };
+		765E32D82A4F7FF50079227F /* NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E32D72A4F7FF50079227F /* NotesTests.swift */; };
 		766CB5D62A479FD500FEF983 /* Note+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766CB5D52A479FD500FEF983 /* Note+Helper.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		76485E982A44DC6100F53AAE /* SlipBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipBoxUITests.swift; sourceTree = "<group>"; };
 		76485E9A2A44DC6100F53AAE /* SlipBoxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipBoxUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		76485EA72A461F5D00F53AAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		765E32D72A4F7FF50079227F /* NotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTests.swift; sourceTree = "<group>"; };
 		766CB5D52A479FD500FEF983 /* Note+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+Helper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 		76485E8D2A44DC6100F53AAE /* SlipBoxTests */ = {
 			isa = PBXGroup;
 			children = (
+				765E32D72A4F7FF50079227F /* NotesTests.swift */,
 				76485E8E2A44DC6100F53AAE /* SlipBoxTests.swift */,
 			);
 			path = SlipBoxTests;
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76485E8F2A44DC6100F53AAE /* SlipBoxTests.swift in Sources */,
+				765E32D82A4F7FF50079227F /* NotesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,10 +472,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kashiash.SlipBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -507,10 +511,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kashiash.SlipBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -531,8 +535,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PFVCA649R3;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kashiash.SlipBoxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -554,8 +558,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PFVCA649R3;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kashiash.SlipBoxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
