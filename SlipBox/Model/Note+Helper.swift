@@ -11,12 +11,8 @@ import CoreData
 extension Note {
 
     var title: String {
-        get {
-            self.title_ ?? ""
-        }
-        set {
-            self.title_ = newValue
-        }
+        get { self.title_ ?? "" }
+        set { self.title_ = newValue }
     }
 
     convenience init (title: String, context:NSManagedObjectContext) {
@@ -49,4 +45,10 @@ extension Note {
 
         return request
     }
+    static func delete(note: Note){
+        guard let context = note.managedObjectContext else { return }
+        context.delete(note)
+    }
+
+    
 }

@@ -20,6 +20,7 @@
 		76485E9B2A44DC6100F53AAE /* SlipBoxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76485E9A2A44DC6100F53AAE /* SlipBoxUITestsLaunchTests.swift */; };
 		765E32D82A4F7FF50079227F /* NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E32D72A4F7FF50079227F /* NotesTests.swift */; };
 		766CB5D62A479FD500FEF983 /* Note+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766CB5D52A479FD500FEF983 /* Note+Helper.swift */; };
+		76835AA32A5AC5260008F1C2 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76835AA22A5AC5260008F1C2 /* Status.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		76485EA72A461F5D00F53AAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		765E32D72A4F7FF50079227F /* NotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTests.swift; sourceTree = "<group>"; };
 		766CB5D52A479FD500FEF983 /* Note+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+Helper.swift"; sourceTree = "<group>"; };
+		76835AA22A5AC5260008F1C2 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				766CB5D52A479FD500FEF983 /* Note+Helper.swift */,
+				76835AA22A5AC5260008F1C2 /* Status.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				76485E782A44DC6000F53AAE /* SlipBoxApp.swift in Sources */,
 				76485E7A2A44DC6000F53AAE /* Persistence.swift in Sources */,
 				766CB5D62A479FD500FEF983 /* Note+Helper.swift in Sources */,
+				76835AA32A5AC5260008F1C2 /* Status.swift in Sources */,
 				762CB2182A48DDE300F04B3F /* NSPredicate+Helper.swift in Sources */,
 				762CB2152A48D86700F04B3F /* NoteDetailView.swift in Sources */,
 				76485E7F2A44DC6000F53AAE /* ContentView.swift in Sources */,

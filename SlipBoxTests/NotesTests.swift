@@ -52,7 +52,7 @@ final class NotesTests: XCTestCase {
         let fetchedNotes = try? context.fetch(fetch)
 
         XCTAssertNotNil(fetchedNotes)
-        XCTAssertTrue(fetchedNotes!.count > 0, "Redicate none should  fetch some objects")
+        XCTAssertTrue(fetchedNotes!.count > 0, "Predicate none should  fetch some objects")
 
     }
 
@@ -63,8 +63,52 @@ final class NotesTests: XCTestCase {
         let fetchedNotes = try? context.fetch(fetch)
 
         XCTAssertNotNil(fetchedNotes)
-        XCTAssertTrue(fetchedNotes!.count == 0, "Redicate none should not fetch any objects")
+        XCTAssertTrue(fetchedNotes!.count == 0, "Predicate none should not fetch any objects")
+    }
+
+    func testDeleteNote(){
+        let note = Note(title: "default note", context: context)
+
+        Note.delete(note: note)
+
+        let fetchedNotes = try? context.fetch(Note.fetch(.all))
+
+        XCTAssertNotNil(fetchedNotes)
+        XCTAssertTrue(fetchedNotes?.count == 0, "Deleted note should not be in database")
+        XCTAssertFalse(fetchedNotes!.contains(note))
 
     }
 
+    func testAsynchronousSave() {
+
+        expectation(forNotification: .NSManagedObjectContextDidSave, object: context)  {_ in
+            return true
+        }
+
+        let note = Note(title: "default note", context: context)
+
+        controller.save()
+
+        waitForExpectations(timeout: 2.0) { error in
+            XCTAssertNil(error, "saving did not complete")
+        }
+    }
+
+//    func testNotSaveWhenNoChanges(){
+//        expectation(forNotification: .NSManagedObjectContextDidSave, object: context)  {_ in
+//            return false
+//        }
+//
+//        controller.save()
+//
+//        waitForExpectations(timeout: 2.0) { error in
+//            XCTAssertTrue(true, "saving should not happen when no changes")
+//        }
+//    }
+
+    func testNoteDefaultIsfavoriteShouldbeNo(){
+        let note = Note(title: "new title", context: context)
+
+        XCTAssertFalse(note.isFavorite,"default is favorite should be NO")
+    }
 }

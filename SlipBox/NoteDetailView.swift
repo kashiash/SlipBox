@@ -14,6 +14,7 @@ struct NoteDetailView: View {
 
 
         VStack(spacing: 20){
+            Text("Order \(Int(note.order))")
             Text("Note detail view").font(.title)
             HStack {
                 Text("Title:")
