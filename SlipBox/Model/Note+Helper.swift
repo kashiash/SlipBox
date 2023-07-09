@@ -31,6 +31,7 @@ extension Note {
 
     var formattedBodyText:NSAttributedString {
         get {
+            
             NSAttributedString()
         }
         set {
@@ -71,6 +72,7 @@ extension Note {
         guard let context = note.managedObjectContext else { return }
         context.delete(note)
     }
+
 
     
 }

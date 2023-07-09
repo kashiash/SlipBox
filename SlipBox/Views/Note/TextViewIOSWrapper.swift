@@ -21,6 +21,7 @@ struct TextViewIOSWrapper: UIViewRepresentable {
         let view = UITextView()
 
         view.allowsEditingTextAttributes = true
+        
         view.isEditable = true
         view.isSelectable = true
         view.font = UIFont.systemFont(ofSize: 18)
