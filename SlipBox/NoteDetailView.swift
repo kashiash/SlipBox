@@ -10,6 +10,7 @@ import SwiftUI
 struct NoteDetailView: View {
 
     @ObservedObject var note: Note
+
     var body: some View {
 
 
@@ -20,6 +21,17 @@ struct NoteDetailView: View {
                 Text("Title:")
                 Text(note.title)
             }
+
+            Picker(selection: $note.status) {
+                ForEach(Status.allCases){ status in
+                    Text(status.rawValue)
+                        .tag(status)
+                }
+            } label: {
+                Text("Note's status")
+            }
+            .pickerStyle(.segmented)
+
             Button("Clean the tile") {
                 note.title = ""
             }
