@@ -18,7 +18,7 @@ extension Note {
     var status: Status{
         get{
             if let rawStatus = status_,
-              let status = Status(rawValue: rawStatus) {
+               let status = Status(rawValue: rawStatus) {
                 return status
             } else {
                 return Status.draft
@@ -32,10 +32,10 @@ extension Note {
     var formattedBodyText:NSAttributedString {
         get {
             
-            NSAttributedString()
+            formattedBodyText_?.toAttributeString() ?? NSAttributedString(string: "")
         }
         set {
-            
+            formattedBodyText_ = newValue.toData()
         }
     }
     convenience init (title: String, context:NSManagedObjectContext) {
