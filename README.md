@@ -6,6 +6,12 @@ notaki do kursu : [https://www.swiftyplace.com/courses/swiftui-and-core-data/das
 
 
 
+![image-20230711231653472](image-20230711231653472.png)
+
+
+
+![image-20230711231833454](image-20230711231833454.png)
+
 ## Setting up project
 
 [1.1 Nowy projekt](docs/1.1_NewProject.md)
