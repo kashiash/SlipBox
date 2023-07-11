@@ -30,3 +30,8 @@ notaki do kursu : [https://www.swiftyplace.com/courses/swiftui-and-core-data/das
 
 
 
+## Schema attributes
+
+[3.3 RTF](docs/3.3_RTF.md)
+
+[3.4 Photo Picker](docs/3.4_PhotoPicker.md)

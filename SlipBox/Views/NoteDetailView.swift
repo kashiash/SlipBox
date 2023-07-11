@@ -34,6 +34,9 @@ struct NoteDetailView: View {
             #else
             TextViewMacOsWrapper(note: note)
             #endif
+
+            OptionalImageView(data: note.image)
+            NotePhotoSelectorButton(note: note)
         }
         .padding()
         .onDisappear {

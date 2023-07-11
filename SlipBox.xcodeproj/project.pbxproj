@@ -19,6 +19,9 @@
 		76485E992A44DC6100F53AAE /* SlipBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76485E982A44DC6100F53AAE /* SlipBoxUITests.swift */; };
 		76485E9B2A44DC6100F53AAE /* SlipBoxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76485E9A2A44DC6100F53AAE /* SlipBoxUITestsLaunchTests.swift */; };
 		765E32D82A4F7FF50079227F /* NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E32D72A4F7FF50079227F /* NotesTests.swift */; };
+		766BB6492A5DEA0000692E84 /* NotePhotoSelectorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766BB6482A5DEA0000692E84 /* NotePhotoSelectorButton.swift */; };
+		766BB64B2A5DF3FC00692E84 /* OptionalImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766BB64A2A5DF3FC00692E84 /* OptionalImageView.swift */; };
+		766BB64E2A5DFB7900692E84 /* macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766BB64D2A5DFB7900692E84 /* macOS.swift */; platformFilters = (macos, ); };
 		766CB5D62A479FD500FEF983 /* Note+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766CB5D52A479FD500FEF983 /* Note+Helper.swift */; };
 		76835AA32A5AC5260008F1C2 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76835AA22A5AC5260008F1C2 /* Status.swift */; };
 		76835AA72A5AF9DF0008F1C2 /* TextViewIOSWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76835AA62A5AF9DF0008F1C2 /* TextViewIOSWrapper.swift */; platformFilter = ios; };
@@ -61,6 +64,9 @@
 		76485E9A2A44DC6100F53AAE /* SlipBoxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipBoxUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		76485EA72A461F5D00F53AAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		765E32D72A4F7FF50079227F /* NotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTests.swift; sourceTree = "<group>"; };
+		766BB6482A5DEA0000692E84 /* NotePhotoSelectorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePhotoSelectorButton.swift; sourceTree = "<group>"; };
+		766BB64A2A5DF3FC00692E84 /* OptionalImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalImageView.swift; sourceTree = "<group>"; };
+		766BB64D2A5DFB7900692E84 /* macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOS.swift; sourceTree = "<group>"; };
 		766CB5D52A479FD500FEF983 /* Note+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+Helper.swift"; sourceTree = "<group>"; };
 		76835AA22A5AC5260008F1C2 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		76835AA62A5AF9DF0008F1C2 /* TextViewIOSWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewIOSWrapper.swift; sourceTree = "<group>"; };
@@ -127,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				76835AA42A5AF9A30008F1C2 /* Views */,
+				766BB64C2A5DFB4F00692E84 /* Crossplatform */,
 				762CB2162A48DD8900F04B3F /* CoreDataHelper */,
 				766CB5D42A479F2900FEF983 /* Model */,
 				76485EA72A461F5D00F53AAE /* Info.plist */,
@@ -166,6 +173,14 @@
 			path = SlipBoxUITests;
 			sourceTree = "<group>";
 		};
+		766BB64C2A5DFB4F00692E84 /* Crossplatform */ = {
+			isa = PBXGroup;
+			children = (
+				766BB64D2A5DFB7900692E84 /* macOS.swift */,
+			);
+			path = Crossplatform;
+			sourceTree = "<group>";
+		};
 		766CB5D42A479F2900FEF983 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +204,8 @@
 			children = (
 				76835AA62A5AF9DF0008F1C2 /* TextViewIOSWrapper.swift */,
 				76835AA82A5B1CF30008F1C2 /* TextViewMacOsWrapper.swift */,
+				766BB6482A5DEA0000692E84 /* NotePhotoSelectorButton.swift */,
+				766BB64A2A5DF3FC00692E84 /* OptionalImageView.swift */,
 			);
 			path = Note;
 			sourceTree = "<group>";
@@ -324,7 +341,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				76485E782A44DC6000F53AAE /* SlipBoxApp.swift in Sources */,
+				766BB6492A5DEA0000692E84 /* NotePhotoSelectorButton.swift in Sources */,
+				766BB64E2A5DFB7900692E84 /* macOS.swift in Sources */,
 				76485E7A2A44DC6000F53AAE /* Persistence.swift in Sources */,
+				766BB64B2A5DF3FC00692E84 /* OptionalImageView.swift in Sources */,
 				766CB5D62A479FD500FEF983 /* Note+Helper.swift in Sources */,
 				76835AA32A5AC5260008F1C2 /* Status.swift in Sources */,
 				76835AAB2A5B25C50008F1C2 /* NSAttributedString+Data+Helper.swift in Sources */,
