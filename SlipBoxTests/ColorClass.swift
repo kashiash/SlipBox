@@ -23,9 +23,17 @@ final class ColorClass: XCTestCase {
         let colorBlue = Color(hex: "0000FF")
         let colorBlueAlpha = Color(hex: "0000FFFF")
 
-        let blue = Color(red: 0,green: 0,blue: 1)
-        XCTAssertTrue(blue == colorBlue, "Converted color from x0000FF should be blue")
-        XCTAssertTrue(blue == colorBlueAlpha, "Converted color from x0000FFFF should be blue")
+        let referenceColorBlue = Color(red: 0,green: 0,blue: 1)
+        XCTAssertTrue(referenceColorBlue == colorBlue, "Converted color from x0000FF should be blue")
+        XCTAssertEqual(referenceColorBlue ,colorBlue, "Converted color from x0000FF should be blue")
+        XCTAssertTrue(referenceColorBlue == colorBlueAlpha, "Converted color from x0000FFFF should be blue")
+    }
+
+    func testColorToHex() {
+        let referenceColorBlue = Color(red: 0,green: 0,blue: 1)
+        let hex = referenceColorBlue.toHex
+
+        XCTAssertEqual(hex,"0000FFFF", "Coverted blue color to hex should be 000000FFFF")
     }
 
 }

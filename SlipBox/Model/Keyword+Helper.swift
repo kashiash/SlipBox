@@ -19,7 +19,7 @@ extension Keyword {
             }
         }
         set {
-            colorHex_ = newValue.toHex()
+            colorHex_ = newValue.toHex
         }
     }
 }
