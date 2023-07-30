@@ -28,13 +28,14 @@ struct NoteDetailView: View {
                 Text("Note's status")
             }
             .pickerStyle(.segmented)
-
-            #if os(iOS)
-            TextViewIOSWrapper(note: note)
-            #else
-            TextViewMacOsWrapper(note: note)
-            #endif
-
+            HStack {
+#if os(iOS)
+                TextViewIOSWrapper(note: note)
+#else
+                TextViewMacOsWrapper(note: note)
+#endif
+                Text(note.bodyText)
+            }
             OptionalImageView(data: note.image)
             NotePhotoSelectorButton(note: note)
         }

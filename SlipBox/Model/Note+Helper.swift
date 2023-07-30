@@ -29,15 +29,22 @@ extension Note {
         }
     }
 
-    var formattedBodyText:NSAttributedString {
+    var formattedBodyText: NSAttributedString {
         get {
             
             formattedBodyText_?.toAttributeString() ?? NSAttributedString(string: "")
         }
         set {
             formattedBodyText_ = newValue.toData()
+            bodyText_ = newValue.string.lowercased()
+
         }
     }
+
+    var bodyText: String {
+        get { bodyText_ ?? "" }
+    }
+
     convenience init (title: String, context:NSManagedObjectContext) {
         self.init(context: context)
         self.title = title

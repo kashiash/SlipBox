@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		762CB2152A48D86700F04B3F /* NoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762CB2142A48D86700F04B3F /* NoteDetailView.swift */; };
 		762CB2182A48DDE300F04B3F /* NSPredicate+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762CB2172A48DDE300F04B3F /* NSPredicate+Helper.swift */; };
+		7639A6B52A76B90F00DBAFD3 /* Keyword+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7639A6B42A76B90F00DBAFD3 /* Keyword+Helper.swift */; };
+		7639A6B72A76B9FF00DBAFD3 /* Color+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7639A6B62A76B9FF00DBAFD3 /* Color+Helper.swift */; };
+		7639A6BB2A76D57300DBAFD3 /* ColorClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7639A6BA2A76D57300DBAFD3 /* ColorClass.swift */; };
 		76485E782A44DC6000F53AAE /* SlipBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76485E772A44DC6000F53AAE /* SlipBoxApp.swift */; };
 		76485E7A2A44DC6000F53AAE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76485E792A44DC6000F53AAE /* Persistence.swift */; };
 		76485E7D2A44DC6000F53AAE /* SlipBox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76485E7B2A44DC6000F53AAE /* SlipBox.xcdatamodeld */; };
@@ -49,6 +52,9 @@
 /* Begin PBXFileReference section */
 		762CB2142A48D86700F04B3F /* NoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailView.swift; sourceTree = "<group>"; };
 		762CB2172A48DDE300F04B3F /* NSPredicate+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+Helper.swift"; sourceTree = "<group>"; };
+		7639A6B42A76B90F00DBAFD3 /* Keyword+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyword+Helper.swift"; sourceTree = "<group>"; };
+		7639A6B62A76B9FF00DBAFD3 /* Color+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Helper.swift"; sourceTree = "<group>"; };
+		7639A6BA2A76D57300DBAFD3 /* ColorClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorClass.swift; sourceTree = "<group>"; };
 		76485E742A44DC6000F53AAE /* SlipBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlipBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76485E772A44DC6000F53AAE /* SlipBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipBoxApp.swift; sourceTree = "<group>"; };
 		76485E792A44DC6000F53AAE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -105,6 +111,7 @@
 				76485E792A44DC6000F53AAE /* Persistence.swift */,
 				762CB2172A48DDE300F04B3F /* NSPredicate+Helper.swift */,
 				76835AAA2A5B25C50008F1C2 /* NSAttributedString+Data+Helper.swift */,
+				7639A6B62A76B9FF00DBAFD3 /* Color+Helper.swift */,
 			);
 			path = CoreDataHelper;
 			sourceTree = "<group>";
@@ -160,6 +167,7 @@
 			children = (
 				765E32D72A4F7FF50079227F /* NotesTests.swift */,
 				76485E8E2A44DC6100F53AAE /* SlipBoxTests.swift */,
+				7639A6BA2A76D57300DBAFD3 /* ColorClass.swift */,
 			);
 			path = SlipBoxTests;
 			sourceTree = "<group>";
@@ -186,6 +194,7 @@
 			children = (
 				766CB5D52A479FD500FEF983 /* Note+Helper.swift */,
 				76835AA22A5AC5260008F1C2 /* Status.swift */,
+				7639A6B42A76B90F00DBAFD3 /* Keyword+Helper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -347,7 +356,9 @@
 				766BB64B2A5DF3FC00692E84 /* OptionalImageView.swift in Sources */,
 				766CB5D62A479FD500FEF983 /* Note+Helper.swift in Sources */,
 				76835AA32A5AC5260008F1C2 /* Status.swift in Sources */,
+				7639A6B72A76B9FF00DBAFD3 /* Color+Helper.swift in Sources */,
 				76835AAB2A5B25C50008F1C2 /* NSAttributedString+Data+Helper.swift in Sources */,
+				7639A6B52A76B90F00DBAFD3 /* Keyword+Helper.swift in Sources */,
 				762CB2182A48DDE300F04B3F /* NSPredicate+Helper.swift in Sources */,
 				762CB2152A48D86700F04B3F /* NoteDetailView.swift in Sources */,
 				76835AA72A5AF9DF0008F1C2 /* TextViewIOSWrapper.swift in Sources */,
@@ -363,6 +374,7 @@
 			files = (
 				76485E8F2A44DC6100F53AAE /* SlipBoxTests.swift in Sources */,
 				765E32D82A4F7FF50079227F /* NotesTests.swift in Sources */,
+				7639A6BB2A76D57300DBAFD3 /* ColorClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
