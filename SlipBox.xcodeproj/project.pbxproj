@@ -12,6 +12,7 @@
 		7639A6B52A76B90F00DBAFD3 /* Keyword+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7639A6B42A76B90F00DBAFD3 /* Keyword+Helper.swift */; };
 		7639A6B72A76B9FF00DBAFD3 /* Color+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7639A6B62A76B9FF00DBAFD3 /* Color+Helper.swift */; };
 		7639A6BB2A76D57300DBAFD3 /* ColorClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7639A6BA2A76D57300DBAFD3 /* ColorClass.swift */; };
+		7639A6BD2A76EC3F00DBAFD3 /* KeywordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7639A6BC2A76EC3F00DBAFD3 /* KeywordTests.swift */; };
 		76485E782A44DC6000F53AAE /* SlipBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76485E772A44DC6000F53AAE /* SlipBoxApp.swift */; };
 		76485E7A2A44DC6000F53AAE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76485E792A44DC6000F53AAE /* Persistence.swift */; };
 		76485E7D2A44DC6000F53AAE /* SlipBox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76485E7B2A44DC6000F53AAE /* SlipBox.xcdatamodeld */; };
@@ -55,6 +56,7 @@
 		7639A6B42A76B90F00DBAFD3 /* Keyword+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyword+Helper.swift"; sourceTree = "<group>"; };
 		7639A6B62A76B9FF00DBAFD3 /* Color+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Helper.swift"; sourceTree = "<group>"; };
 		7639A6BA2A76D57300DBAFD3 /* ColorClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorClass.swift; sourceTree = "<group>"; };
+		7639A6BC2A76EC3F00DBAFD3 /* KeywordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordTests.swift; sourceTree = "<group>"; };
 		76485E742A44DC6000F53AAE /* SlipBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlipBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76485E772A44DC6000F53AAE /* SlipBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipBoxApp.swift; sourceTree = "<group>"; };
 		76485E792A44DC6000F53AAE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				765E32D72A4F7FF50079227F /* NotesTests.swift */,
 				76485E8E2A44DC6100F53AAE /* SlipBoxTests.swift */,
 				7639A6BA2A76D57300DBAFD3 /* ColorClass.swift */,
+				7639A6BC2A76EC3F00DBAFD3 /* KeywordTests.swift */,
 			);
 			path = SlipBoxTests;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76485E8F2A44DC6100F53AAE /* SlipBoxTests.swift in Sources */,
+				7639A6BD2A76EC3F00DBAFD3 /* KeywordTests.swift in Sources */,
 				765E32D82A4F7FF50079227F /* NotesTests.swift in Sources */,
 				7639A6BB2A76D57300DBAFD3 /* ColorClass.swift in Sources */,
 			);
