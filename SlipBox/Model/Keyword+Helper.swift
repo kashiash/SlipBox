@@ -43,4 +43,9 @@ extension Keyword {
 
         }
     }
+
+//    var colorTransformed: UIColor {
+//        get { colorTransformed_ ?? UIColor.black }
+//        set { colorTransformed_ = newValue}
+//    }
 }

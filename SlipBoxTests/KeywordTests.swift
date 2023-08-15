@@ -48,7 +48,18 @@ final class KeywordTests: XCTestCase {
         let keyword = Keyword(context: context)
         keyword.color = referenceColor
         let retrievedColor = keyword.color
-
+        
         XCTAssertTrue(retrievedColor == referenceColor , "Keyword set by component fields, color should be blue")
     }
+
+//    func TestColorTransformer() {
+//        let referenceColor = UIColor(red: 0, green: 0, blue: 1, alpha: 1)
+//        let keyword = Keyword(context: context)
+//        keyword.colorTransformed_ = referenceColor
+//
+//        let retrievedColor = keyword.colorTransformed
+//
+//        XCTAssertTrue(retrievedColor == referenceColor , "Keyword set by component fields, color should be blue")
+//
+//    }
 }

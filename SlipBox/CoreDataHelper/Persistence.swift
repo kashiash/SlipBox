@@ -18,6 +18,7 @@ class PersistenceController : ObservableObject {
     @Published var syncErrorMessage: String? = nil
 
     init(inMemory: Bool = false) {
+
         container = NSPersistentCloudKitContainer(name: "SlipBox")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
