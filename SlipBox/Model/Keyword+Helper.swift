@@ -40,12 +40,6 @@ extension Keyword {
             } else {
                 opacity_ = 1
             }
-
         }
     }
-
-//    var colorTransformed: UIColor {
-//        get { colorTransformed_ ?? UIColor.black }
-//        set { colorTransformed_ = newValue}
-//    }
 }
