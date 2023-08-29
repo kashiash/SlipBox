@@ -20,6 +20,11 @@ extension Folder {
         set {creationDate_ = newValue}
     }
 
+    var notes: Set<Note> {
+        get { (notes_ as? Set<Note>) ?? []}
+        set {notes_ = newValue as NSSet}
+    }
+
     convenience init(name: String , context: NSManagedObjectContext)  {
         self.init(context: context)
         self.name = name
