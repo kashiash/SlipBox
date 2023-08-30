@@ -9,6 +9,12 @@ import Foundation
 import SwiftUI
 
 extension Keyword {
+
+    var name : String {
+        get { name_ ?? "" }
+        set { name_ = newValue }
+    }
+
     var colorHex: Color {
         get {
             if let colorHexValue = colorHex_,
@@ -41,5 +47,10 @@ extension Keyword {
                 opacity_ = 1
             }
         }
+    }
+
+    var notes: Set<Note> {
+        get { (notes_ as? Set<Note>) ?? []}
+        set {notes_ = newValue as NSSet }
     }
 }

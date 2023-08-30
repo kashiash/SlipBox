@@ -20,9 +20,14 @@ extension Folder {
         set {creationDate_ = newValue}
     }
 
+    var subfolders: Set<Folder> {
+        get {(subfolders_ as? Set<Folder>) ?? []}
+        set {subfolders_ = newValue as NSSet }
+    }
+
     var notes: Set<Note> {
         get { (notes_ as? Set<Note>) ?? []}
-        set {notes_ = newValue as NSSet}
+        set {notes_ = newValue as NSSet }
     }
 
     convenience init(name: String , context: NSManagedObjectContext)  {

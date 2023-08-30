@@ -45,6 +45,22 @@ extension Note {
         get { bodyText_ ?? "" }
     }
 
+
+    var backSubnotes: Set<Note> {
+        get {(backSubnotes_ as? Set<Note>) ?? [] }
+        set {backSubnotes_ = newValue as NSSet }
+    }
+
+    var subnotes: Set<Note> {
+        get {(subnotes_ as? Set<Note>) ?? [] }
+        set {subnotes_ = newValue as NSSet }
+    }
+
+    var keywords: Set<Keyword> {
+        get { (keywords_ as? Set<Keyword>) ?? []}
+        set {keywords_ = newValue as NSSet }
+    }
+
     convenience init (title: String, context:NSManagedObjectContext) {
         self.init(context: context)
         self.title = title
