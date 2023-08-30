@@ -39,4 +39,9 @@ extension Folder {
         request.predicate = predicate
         return request
     }
+
+    static func delete(_ folder: Folder) {
+        guard let context = folder.managedObjectContext else { return }
+        context.delete(folder)
+    }
 }

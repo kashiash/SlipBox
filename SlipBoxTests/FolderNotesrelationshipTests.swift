@@ -58,5 +58,11 @@ final class FolderNotesrelationshipTests: XCTestCase {
         let note = Note(title: "new note", context: context)
 
         note.folder = folder
+
+        Folder.delete(folder)
+        let retrievedNotes = try! context.fetch(Note.fetch(.all))
+        let retrivedFolders = try! context.fetch(Folder.fetch(.all))
+        XCTAssertTrue(retrievedNotes.count == 0, "There should be no note after delete")
+        XCTAssertTrue(retrivedFolders.count == 0,"There should be no folder after delete")
     }
 }
