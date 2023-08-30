@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		760ED3FB2A9FDC56008B8168 /* FolderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760ED3FA2A9FDC56008B8168 /* FolderListView.swift */; };
 		762CB2152A48D86700F04B3F /* NoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762CB2142A48D86700F04B3F /* NoteDetailView.swift */; };
 		762CB2182A48DDE300F04B3F /* NSPredicate+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762CB2172A48DDE300F04B3F /* NSPredicate+Helper.swift */; };
 		7639A6B52A76B90F00DBAFD3 /* Keyword+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7639A6B42A76B90F00DBAFD3 /* Keyword+Helper.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		760ED3FA2A9FDC56008B8168 /* FolderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderListView.swift; sourceTree = "<group>"; };
 		762CB2142A48D86700F04B3F /* NoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailView.swift; sourceTree = "<group>"; };
 		762CB2172A48DDE300F04B3F /* NSPredicate+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+Helper.swift"; sourceTree = "<group>"; };
 		7639A6B42A76B90F00DBAFD3 /* Keyword+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyword+Helper.swift"; sourceTree = "<group>"; };
@@ -113,6 +115,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		760ED3F92A9FDC3A008B8168 /* Folder */ = {
+			isa = PBXGroup;
+			children = (
+				760ED3FA2A9FDC56008B8168 /* FolderListView.swift */,
+			);
+			path = Folder;
+			sourceTree = "<group>";
+		};
 		762CB2162A48DD8900F04B3F /* CoreDataHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +224,7 @@
 		76835AA42A5AF9A30008F1C2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				760ED3F92A9FDC3A008B8168 /* Folder */,
 				762CB2142A48D86700F04B3F /* NoteDetailView.swift */,
 				76835AA52A5AF9B30008F1C2 /* Note */,
 			);
@@ -373,6 +384,7 @@
 				76835AAB2A5B25C50008F1C2 /* NSAttributedString+Data+Helper.swift in Sources */,
 				7639A6B52A76B90F00DBAFD3 /* Keyword+Helper.swift in Sources */,
 				762CB2182A48DDE300F04B3F /* NSPredicate+Helper.swift in Sources */,
+				760ED3FB2A9FDC56008B8168 /* FolderListView.swift in Sources */,
 				762CB2152A48D86700F04B3F /* NoteDetailView.swift in Sources */,
 				76835AA72A5AF9DF0008F1C2 /* TextViewIOSWrapper.swift in Sources */,
 				76835AA92A5B1CF30008F1C2 /* TextViewMacOsWrapper.swift in Sources */,
