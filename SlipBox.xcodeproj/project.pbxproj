@@ -27,6 +27,8 @@
 		766BB6492A5DEA0000692E84 /* NotePhotoSelectorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766BB6482A5DEA0000692E84 /* NotePhotoSelectorButton.swift */; };
 		766BB64B2A5DF3FC00692E84 /* OptionalImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766BB64A2A5DF3FC00692E84 /* OptionalImageView.swift */; };
 		766BB64E2A5DFB7900692E84 /* macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766BB64D2A5DFB7900692E84 /* macOS.swift */; platformFilters = (macos, ); };
+		766CA6D92AA130E500BE2D47 /* FolderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766CA6D82AA130E500BE2D47 /* FolderRow.swift */; };
+		766CA6DB2AA1313300BE2D47 /* FolderEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766CA6DA2AA1313300BE2D47 /* FolderEditorView.swift */; };
 		766CB5D62A479FD500FEF983 /* Note+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766CB5D52A479FD500FEF983 /* Note+Helper.swift */; };
 		76835AA32A5AC5260008F1C2 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76835AA22A5AC5260008F1C2 /* Status.swift */; };
 		76835AA72A5AF9DF0008F1C2 /* TextViewIOSWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76835AA62A5AF9DF0008F1C2 /* TextViewIOSWrapper.swift */; platformFilter = ios; };
@@ -80,6 +82,8 @@
 		766BB6482A5DEA0000692E84 /* NotePhotoSelectorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePhotoSelectorButton.swift; sourceTree = "<group>"; };
 		766BB64A2A5DF3FC00692E84 /* OptionalImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalImageView.swift; sourceTree = "<group>"; };
 		766BB64D2A5DFB7900692E84 /* macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOS.swift; sourceTree = "<group>"; };
+		766CA6D82AA130E500BE2D47 /* FolderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderRow.swift; sourceTree = "<group>"; };
+		766CA6DA2AA1313300BE2D47 /* FolderEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderEditorView.swift; sourceTree = "<group>"; };
 		766CB5D52A479FD500FEF983 /* Note+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+Helper.swift"; sourceTree = "<group>"; };
 		76835AA22A5AC5260008F1C2 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		76835AA62A5AF9DF0008F1C2 /* TextViewIOSWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewIOSWrapper.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				760ED3FA2A9FDC56008B8168 /* FolderListView.swift */,
+				766CA6D82AA130E500BE2D47 /* FolderRow.swift */,
+				766CA6DA2AA1313300BE2D47 /* FolderEditorView.swift */,
 			);
 			path = Folder;
 			sourceTree = "<group>";
@@ -378,6 +384,8 @@
 				76485E7A2A44DC6000F53AAE /* Persistence.swift in Sources */,
 				766BB64B2A5DF3FC00692E84 /* OptionalImageView.swift in Sources */,
 				766CB5D62A479FD500FEF983 /* Note+Helper.swift in Sources */,
+				766CA6D92AA130E500BE2D47 /* FolderRow.swift in Sources */,
+				766CA6DB2AA1313300BE2D47 /* FolderEditorView.swift in Sources */,
 				769F28E32A9D2014000EBD56 /* Folder+Helper.swift in Sources */,
 				76835AA32A5AC5260008F1C2 /* Status.swift in Sources */,
 				7639A6B72A76B9FF00DBAFD3 /* Color+Helper.swift in Sources */,

@@ -8,13 +8,37 @@
 import SwiftUI
 
 struct FolderListView: View {
+
+    @Environment(\.managedObjectContext) var context
+    @FetchRequest(fetchRequest: Folder.fetch(.all)) private var folders: FetchedResults<Folder>
+
+    @State private var selectedFolder: Folder? = nil
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(selection: $selectedFolder) {
+            ForEach(folders) { folder in
+                Text(folder.name)
+                    .tag(folder)
+            }
+        }
+        // .listStyle(.plain)
+        .toolbar {
+            ToolbarItem (placement: .primaryAction)  {
+                Button {
+                    let newFolder = Folder(name: "new folder", context: context)
+                    selectedFolder = newFolder
+
+                } label: {
+                    Label("Create new folder", systemImage: "folder.badge.plus")
+                }
+            }
+        }
     }
 }
 
 struct FolderListView_Previews: PreviewProvider {
     static var previews: some View {
         FolderListView()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

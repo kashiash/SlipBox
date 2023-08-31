@@ -99,6 +99,9 @@ class PersistenceController : ObservableObject {
         for index in 0..<10 {
             let newNote = Note(title: "new note \(index)",context: viewContext)
             newNote.creationDate = Date() + TimeInterval(index)
+
+            let newFolder = Folder(name: "folder \(index)", context: viewContext)
+            newFolder.creationDate = Date() + TimeInterval(index)
         }
         return result
     }()
