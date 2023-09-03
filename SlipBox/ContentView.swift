@@ -9,56 +9,37 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(fetchRequest: Note.fetch(.all))
 
-//    @FetchRequest(
-//        sortDescriptors: [NSSortDescriptor(keyPath: \Note.creationDate, ascending: true)],
-//        animation: .default)
-    
-    private var notes: FetchedResults<Note>
+
+
+    @Environment(\.managedObjectContext) private var viewContext
+
+    @State private var selectedNote: Note? = nil
+    @State private var selectedFolder : Folder? = nil
+    @State private var columnVisiblity: NavigationSplitViewVisibility = .all
+
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(notes) { note in
-                    NavigationLink {
-                        NoteDetailView(note: note)
-                    } label: {
-                        VStack{
-                            Text(note.title)
-                            Text(note.creationDate!, formatter: itemFormatter)
-                        }
-                    }
-                }
-                .onDelete(perform: deleteItems)
+        NavigationSplitView (columnVisibility: $columnVisiblity){
+            FolderListView(selectedFolder: $selectedFolder)
+        } content: {
+            if let folder = selectedFolder {
+                NoteListView(selectedFolder: folder, selectedNote: $selectedNote)
             }
-            .toolbar {
-                ToolbarItem {
-                    Button(action: addNote) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
+        } detail: {
+            if let note = selectedNote {
+                NoteDetailView(note: note)
+            } else {
+                Text("Select a note")
+                    .foregroundColor(.secondary)
             }
-            
         }
     }
     
-    private func addNote() {
-        let newNote = Note(title: "new note", context: viewContext)
-    }
-    
-    private func deleteItems(offsets: IndexSet) {
-        offsets.map { notes[$0] }.forEach(viewContext.delete)
-    }
+
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

@@ -20,7 +20,7 @@
     <entity name="Note" representedClassName="Note" syncable="YES" codeGenerationType="class">
         <attribute name="bodyText_" optional="YES" attributeType="String"/>
         <attribute name="canonicalTitle" optional="YES" attributeType="String" derived="YES" derivationExpression="canonical:(title_)"/>
-        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="creationDate_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="formattedBodyText_" optional="YES" attributeType="Binary"/>
         <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="isFavorite" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>

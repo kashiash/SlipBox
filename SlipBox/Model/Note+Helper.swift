@@ -15,6 +15,10 @@ extension Note {
         set { self.title_ = newValue }
     }
 
+    var creationDate: Date {
+        get { creationDate_ ?? Date() }
+    }
+    
     var status: Status{
         get{
             if let rawStatus = status_,
@@ -75,7 +79,7 @@ extension Note {
         }
     }
     public override func awakeFromInsert() {
-        self.creationDate = Date()
+        self.creationDate_ = Date()
     }
     func fetch()  -> NSFetchRequest<Note> {
         let request = NSFetchRequest<Note>(entityName: "Note")
@@ -95,7 +99,12 @@ extension Note {
         guard let context = note.managedObjectContext else { return }
         context.delete(note)
     }
+}
+
+extension Note: Comparable {
+    public static func < (lhs: Note, rhs: Note) -> Bool {
+        lhs.creationDate < rhs.creationDate
+    }
 
 
-    
 }
