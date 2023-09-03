@@ -15,15 +15,16 @@ struct FolderListView: View {
     @Binding var selectedFolder: Folder?
 
     var body: some View {
-        List(selection: $selectedFolder) {
-            ForEach(folders) { folder in
-                NavigationLink(value: folder) {
-                    FolderRow(folder: folder)
+        Group{
+            List(selection: $selectedFolder) {
+                ForEach(folders) { folder in
+                    NavigationLink(value: folder) {
+                        FolderRow(folder: folder)
+                    }
                 }
-            }
-            .onDelete(perform: deleteFolders(offsets:))
+                .onDelete(perform: deleteFolders(offsets:))
 
-        }
+            }}
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button {
