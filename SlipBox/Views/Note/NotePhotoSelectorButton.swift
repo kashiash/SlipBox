@@ -9,28 +9,34 @@ import SwiftUI
 import PhotosUI
 
 struct NotePhotoSelectorButton: View {
+    @Environment(\.managedObjectContext) var context
     @ObservedObject var note: Note
     @State private var selectedItem: PhotosPickerItem? = nil
 
     var body: some View {
 
         PhotosPicker(selection: $selectedItem,
-                    matching: .images,
-                    photoLibrary: .shared()){
-            if note.image == nil {
+                     matching: .images,
+                     photoLibrary: .shared()){
+            if note.attachment == nil {
                 Text("Import photo")
             } else {
                 Text("Change photo")
             }
-
         }
-                    .onChange(of: selectedItem) { newValue in
-                        Task{
-                            if let data = try? await newValue?.loadTransferable(type: Data.self) {
-                                note.image = data
-                            }
-                        }
-                    }
+        .onChange(of: selectedItem) { newValue in
+            Task{
+                 if let data = try? await newValue?.loadTransferable(type: Data.self) {
+                     if let attachment = note.attachment {
+                         attachment.imageData = data
+                         attachment.thumbnailData = nil
+                     } else {
+                         note.attachment = Attachment(image: data, context: context)
+                     }
+                    // note.attachment?.imageData = data
+                             }
+                         }
+                     }
     }
 }
 

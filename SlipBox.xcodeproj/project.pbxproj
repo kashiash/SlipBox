@@ -38,6 +38,8 @@
 		76835AAB2A5B25C50008F1C2 /* NSAttributedString+Data+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76835AAA2A5B25C50008F1C2 /* NSAttributedString+Data+Helper.swift */; };
 		769F28E32A9D2014000EBD56 /* Folder+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F28E22A9D2014000EBD56 /* Folder+Helper.swift */; };
 		769F28E72A9E8BA0000EBD56 /* FolderNotesrelationshipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F28E62A9E8BA0000EBD56 /* FolderNotesrelationshipTests.swift */; };
+		76ABEF942AA8F9FE002815F6 /* Atachment+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ABEF932AA8F9FE002815F6 /* Atachment+Helper.swift */; };
+		76ABEF962AA92018002815F6 /* NoteAttachmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ABEF952AA92018002815F6 /* NoteAttachmentView.swift */; };
 		76E9A3E02A9D30A30074783A /* FolderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E9A3DF2A9D30A30074783A /* FolderTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +97,8 @@
 		76835AAA2A5B25C50008F1C2 /* NSAttributedString+Data+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Data+Helper.swift"; sourceTree = "<group>"; };
 		769F28E22A9D2014000EBD56 /* Folder+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+Helper.swift"; sourceTree = "<group>"; };
 		769F28E62A9E8BA0000EBD56 /* FolderNotesrelationshipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderNotesrelationshipTests.swift; sourceTree = "<group>"; };
+		76ABEF932AA8F9FE002815F6 /* Atachment+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Atachment+Helper.swift"; sourceTree = "<group>"; };
+		76ABEF952AA92018002815F6 /* NoteAttachmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteAttachmentView.swift; sourceTree = "<group>"; };
 		76E9A3DF2A9D30A30074783A /* FolderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +144,7 @@
 				762CB2172A48DDE300F04B3F /* NSPredicate+Helper.swift */,
 				76835AAA2A5B25C50008F1C2 /* NSAttributedString+Data+Helper.swift */,
 				7639A6B62A76B9FF00DBAFD3 /* Color+Helper.swift */,
+				76ABEF932AA8F9FE002815F6 /* Atachment+Helper.swift */,
 			);
 			path = CoreDataHelper;
 			sourceTree = "<group>";
@@ -172,7 +177,6 @@
 				762CB2162A48DD8900F04B3F /* CoreDataHelper */,
 				766CB5D42A479F2900FEF983 /* Model */,
 				76485EA72A461F5D00F53AAE /* Info.plist */,
-				76485E772A44DC6000F53AAE /* SlipBoxApp.swift */,
 				76485E7E2A44DC6000F53AAE /* ContentView.swift */,
 				76485E802A44DC6100F53AAE /* Assets.xcassets */,
 				76485E822A44DC6100F53AAE /* SlipBox.entitlements */,
@@ -225,6 +229,7 @@
 			children = (
 				766CB5D52A479FD500FEF983 /* Note+Helper.swift */,
 				76835AA22A5AC5260008F1C2 /* Status.swift */,
+				76485E772A44DC6000F53AAE /* SlipBoxApp.swift */,
 				7639A6B42A76B90F00DBAFD3 /* Keyword+Helper.swift */,
 				769F28E22A9D2014000EBD56 /* Folder+Helper.swift */,
 			);
@@ -235,7 +240,6 @@
 			isa = PBXGroup;
 			children = (
 				760ED3F92A9FDC3A008B8168 /* Folder */,
-				762CB2142A48D86700F04B3F /* NoteDetailView.swift */,
 				76835AA52A5AF9B30008F1C2 /* Note */,
 			);
 			path = Views;
@@ -246,10 +250,12 @@
 			children = (
 				76835AA62A5AF9DF0008F1C2 /* TextViewIOSWrapper.swift */,
 				76835AA82A5B1CF30008F1C2 /* TextViewMacOsWrapper.swift */,
+				762CB2142A48D86700F04B3F /* NoteDetailView.swift */,
 				766BB6482A5DEA0000692E84 /* NotePhotoSelectorButton.swift */,
 				766BB64A2A5DF3FC00692E84 /* OptionalImageView.swift */,
 				766CA7062AA4D48100BE2D47 /* NoteListView.swift */,
 				766CA7082AA4F7E900BE2D47 /* NoteRow.swift */,
+				76ABEF952AA92018002815F6 /* NoteAttachmentView.swift */,
 			);
 			path = Note;
 			sourceTree = "<group>";
@@ -389,6 +395,7 @@
 				766BB64E2A5DFB7900692E84 /* macOS.swift in Sources */,
 				76485E7A2A44DC6000F53AAE /* Persistence.swift in Sources */,
 				766BB64B2A5DF3FC00692E84 /* OptionalImageView.swift in Sources */,
+				76ABEF962AA92018002815F6 /* NoteAttachmentView.swift in Sources */,
 				766CB5D62A479FD500FEF983 /* Note+Helper.swift in Sources */,
 				766CA6D92AA130E500BE2D47 /* FolderRow.swift in Sources */,
 				766CA6DB2AA1313300BE2D47 /* FolderEditorView.swift in Sources */,
@@ -402,6 +409,7 @@
 				760ED3FB2A9FDC56008B8168 /* FolderListView.swift in Sources */,
 				762CB2152A48D86700F04B3F /* NoteDetailView.swift in Sources */,
 				76835AA72A5AF9DF0008F1C2 /* TextViewIOSWrapper.swift in Sources */,
+				76ABEF942AA8F9FE002815F6 /* Atachment+Helper.swift in Sources */,
 				766CA7092AA4F7E900BE2D47 /* NoteRow.swift in Sources */,
 				76835AA92A5B1CF30008F1C2 /* TextViewMacOsWrapper.swift in Sources */,
 				76485E7F2A44DC6000F53AAE /* ContentView.swift in Sources */,

@@ -36,7 +36,10 @@ struct NoteDetailView: View {
 #endif
                 Text(note.bodyText)
             }
-            OptionalImageView(data: note.image)
+            //OptionalImageView(data: note.attachment?.getThumbnail())
+            if let attachment = note.attachment {
+                NoteAttachmentView(attachment: attachment)
+            }
             NotePhotoSelectorButton(note: note)
         }
         .padding()
