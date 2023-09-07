@@ -5,8 +5,7 @@
 //  Created by Jacek Kosinski U on 09/07/2023.
 //
 
-import Foundation
-import UIKit
+
 import SwiftUI
 
 struct TextViewIOSWrapper: UIViewRepresentable {

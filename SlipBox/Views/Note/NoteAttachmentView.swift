@@ -7,24 +7,102 @@
 
 import SwiftUI
 
+import SwiftUI
+import CoreData
+
 struct NoteAttachmentView: View {
-    let attachment: Attachment
-    @State private var showFullImage : Bool = false
+
+    @ObservedObject var attachment: Attachment
+
+    @State private var showFullImage: Bool = false
+    @State private var thumbnailImage: UIImage? = nil
+    @State private var attachmentID: NSManagedObjectID? = nil
+
+    @Environment(\.pixelLength) var pixelLength
 
     var body: some View {
-        if let image = attachment.getThumbnail() {
-            Image(uiImage: image)
-                .gesture(TapGesture(count: 2).onEnded({ _ in
-                    showFullImage.toggle()
-                }))
-                .sheet(isPresented: $showFullImage) {
-                    if let data = attachment.imageData,
-                       let image = UIImage(data: data) {
-                        Image(uiImage: image)
-                            .resizable()
-                            .scaledToFit()
+
+        Group {
+            if let image = thumbnailImage {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+
+                    .gesture(TapGesture(count: 2).onEnded({ _ in
+                        showFullImage.toggle()
+                    }))
+
+                    .sheet(isPresented: $showFullImage) {
+
+                        FullImageView(attachment: attachment,
+                                      title: "full image \(dataSize(data: attachment.imageData)) KB")
                     }
+            } else {
+                Color.gray
+            }
+        }
+        .frame(width: attachment.imageWidth() * pixelLength,
+               height: attachment.imageHeight() * pixelLength)
+
+        .task(id: attachment.imageData) {
+            thumbnailImage = nil
+            attachmentID = attachment.objectID
+
+            let newThumbnailImage = await attachment.getThumbnail()
+
+            attachment.updateImageSize(to: newThumbnailImage?.size)
+
+            if self.attachmentID == attachment.objectID {
+                thumbnailImage = newThumbnailImage
+            }
+        }
+    }
+
+    func dataSize(data: Data?) -> Int {
+        if let data = data {
+           return data.count / 1024
+        } else {
+           return 0
+        }
+    }
+
+}
+
+
+private struct FullImageView: View {
+
+    let attachment: Attachment
+    let title: String
+
+    @State private var image: UIImage? = nil
+
+    @Environment(\.dismiss) var dismiss
+
+
+    var body: some View {
+
+        VStack {
+
+            HStack {
+                Text(title)
+                    .font(.title)
+                Button("Done") {
+                    dismiss()
                 }
+            }
+
+            if let image = image {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+            } else {
+                ProgressView("Loading Image ...")
+                    .frame(minWidth: 300, minHeight: 300)
+            }
+        }
+        .padding()
+        .task {
+            image = await attachment.createFullImage()
         }
     }
 }

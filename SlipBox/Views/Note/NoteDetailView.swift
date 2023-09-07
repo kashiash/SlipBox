@@ -12,40 +12,47 @@ struct NoteDetailView: View {
     @ObservedObject var note: Note
 
     var body: some View {
-
-
-        VStack(spacing: 20){
-            Text("Order \(Int(note.order))")
-
-            TextField("title", text: $note.title)
-                .textFieldStyle(.roundedBorder)
-            Picker(selection: $note.status) {
-                ForEach(Status.allCases){ status in
-                    Text(status.rawValue)
-                        .tag(status)
+        ScrollView{
+            VStack(spacing: 20) {
+                
+                Text("order \(Int(note.order))")
+                
+                TextField("title", text: $note.title)
+                    .textFieldStyle(.roundedBorder)
+                    .font(.title)
+                
+                Picker(selection: $note.status) {
+                    ForEach(Status.allCases) { status in
+                        Text(status.rawValue)
+                            .tag(status)
+                    }
+                } label: {
+                    Text("Note´s status")
                 }
-            } label: {
-                Text("Note's status")
-            }
-            .pickerStyle(.segmented)
-            HStack {
+                .pickerStyle(.segmented)
+                
 #if os(iOS)
                 TextViewIOSWrapper(note: note)
 #else
+                
                 TextViewMacOsWrapper(note: note)
 #endif
-                Text(note.bodyText)
+                
+                
+                //OptionalImageView(data: note.img)
+                if let attachment = note.attachment {
+                    NoteAttachmentView(attachment: attachment)
+                }
+                
+                NotePhotoSelectorButton(note: note)
+                
             }
-            //OptionalImageView(data: note.attachment?.getThumbnail())
-            if let attachment = note.attachment {
-                NoteAttachmentView(attachment: attachment)
-            }
-            NotePhotoSelectorButton(note: note)
+            
+            .padding()
         }
-        .padding()
-        .onDisappear {
-            PersistenceController.shared.save()
-        }
+      .onDisappear {
+          PersistenceController.shared.save()
+      }
 
     }
 }
@@ -53,8 +60,9 @@ struct NoteDetailView: View {
 struct NoteDetailView_Previews: PreviewProvider {
     static var previews: some View {
         let context = PersistenceController.preview.container.viewContext
-        let note = Note(title: "New note ", context: context)
-        NoteDetailView(note: note)
+        let note = Note(title: "New note", context: context)
+
+       return NoteDetailView(note: note)
             .environment(\.managedObjectContext, context)
     }
 }
