@@ -59,9 +59,9 @@ extension Attachment {
 
         Task {
         #if os(iOS)
-        self.thumbnailData = newThumbnail?.pngData()
+            self.thumbnailData = newThumbnail?.pngData()
         #else
-        self.thumbnailData = newThumbnail?.tiffRepresentation
+            self.thumbnailData = newThumbnail?.tiffRepresentation
         #endif
         }
 

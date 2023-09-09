@@ -17,7 +17,7 @@ struct NotePhotoSelectorButton: View {
 
         PhotosPicker(selection: $selectedItem,
                      matching: .images,
-                     photoLibrary: .shared()){
+                     photoLibrary: .shared()) {
             if note.attachment == nil {
                 Text("Import photo")
             } else {
@@ -25,18 +25,27 @@ struct NotePhotoSelectorButton: View {
             }
         }
         .onChange(of: selectedItem) { newValue in
-            Task{
-                 if let data = try? await newValue?.loadTransferable(type: Data.self) {
-                     if let attachment = note.attachment {
-                         attachment.imageData = data
-                         attachment.thumbnailData = nil
-                     } else {
-                         note.attachment = Attachment(image: data, context: context)
-                     }
-                    // note.attachment?.imageData = data
+                         Task{
+                             do {
+                                 if let data = try await newValue?.loadTransferable(type: Data.self) {
+                                     update(data: data)
+                                 }
+                             } catch {
+                                 print("Photopicker error: \(error.localizedDescription)")
                              }
+
                          }
                      }
+    }
+
+    @MainActor
+    func update(data: Data){
+        if let attachment = note.attachment {
+            attachment.imageData = data
+            attachment.thumbnailData = nil
+        } else {
+            note.attachment = Attachment(image: data, context: context)
+        }
     }
 }
 

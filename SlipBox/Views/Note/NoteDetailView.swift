@@ -30,30 +30,22 @@ struct NoteDetailView: View {
                     Text("Note´s status")
                 }
                 .pickerStyle(.segmented)
-                
 #if os(iOS)
                 TextViewIOSWrapper(note: note)
 #else
-                
                 TextViewMacOsWrapper(note: note)
 #endif
-                
-                
                 //OptionalImageView(data: note.img)
                 if let attachment = note.attachment {
                     NoteAttachmentView(attachment: attachment)
                 }
-                
                 NotePhotoSelectorButton(note: note)
-                
             }
-            
             .padding()
         }
       .onDisappear {
           PersistenceController.shared.save()
       }
-
     }
 }
 
