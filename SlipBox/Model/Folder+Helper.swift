@@ -41,8 +41,14 @@ extension Folder {
     static func fetch(_ predicate: NSPredicate) -> NSFetchRequest<Folder> {
         let request = Folder.fetchRequest()
         request.sortDescriptors = [NSSortDescriptor(keyPath: \Folder.creationDate_, ascending: true)]
+        request.fetchBatchSize = 5
         request.predicate = predicate
         return request
+    }
+
+    static func fetchTopFolders() -> NSFetchRequest<Folder> {
+        let predicate = NSPredicate(format: "%K == nil", FolderProperties.parent)
+        return Folder.fetch(predicate)
     }
 
     static func delete(_ folder: Folder) {
@@ -50,3 +56,20 @@ extension Folder {
         context.delete(folder)
     }
 }
+
+extension Folder: Comparable {
+    public static func < (lhs: Folder, rhs: Folder) -> Bool {
+        lhs.creationDate < rhs.creationDate
+    }
+
+
+}
+
+//MARK: - define my string constants
+
+struct FolderProperties {
+    static let parent = "parent"
+    static let children = "children_"
+    static let name = "name_"
+}
+

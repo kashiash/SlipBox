@@ -49,4 +49,50 @@ final class FolderTests: XCTestCase {
         XCTAssertTrue(retrivedFolders?.last   == folder3)
     }
 
+    func testFetchTopFolders() {
+        let parent = Folder(name:"parent",context: context)
+        let child = Folder(name: "child", context: context)
+        parent.subfolders.insert(child)
+
+        let predicate = NSPredicate(format: "parent == nil")
+        let fetchRequest = Folder.fetch(predicate)
+
+        let retrievedFolders = try! context.fetch(fetchRequest)
+
+        XCTAssertTrue(retrievedFolders.count == 1)
+        XCTAssertTrue(retrievedFolders.contains(parent))
+
+        let fetchRequestNew = Folder.fetchTopFolders()
+        let rerievedTopFolders = try! context.fetch(fetchRequestNew)
+        XCTAssertTrue(rerievedTopFolders.count == 1)
+        XCTAssertTrue(rerievedTopFolders.contains(parent))
+
+                      }
+
+    func testFetchTop2Folders(){
+        let parent1 = Folder(name:"parent",context: context)
+        let parent2 = Folder(name:"parent",context: context)
+        let parent3 = Folder(name:"parent",context: context)
+
+        let fetchRequestNew =  Folder.fetchTopFolders()
+        fetchRequestNew.fetchLimit = 2
+        let rerievedTopFolders = try! context.fetch(fetchRequestNew)
+
+        XCTAssertTrue(rerievedTopFolders.count == 2)
+        XCTAssertTrue(rerievedTopFolders.contains(parent1))
+    }
+
+    func testFetchTopFoldersWithBatchSize(){
+        let parent1 = Folder(name:"parent",context: context)
+        let parent2 = Folder(name:"parent",context: context)
+        let parent3 = Folder(name:"parent",context: context)
+
+        let fetchRequestNew =  Folder.fetchTopFolders()
+        fetchRequestNew.fetchBatchSize = 2
+        let rerievedTopFolders = try! context.fetch(fetchRequestNew)
+
+        XCTAssertTrue(rerievedTopFolders.count == 3)
+        XCTAssertTrue(rerievedTopFolders.contains(parent1))
+    }
+
 }

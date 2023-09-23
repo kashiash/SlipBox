@@ -39,6 +39,7 @@ struct NoteAttachmentView: View {
                     }
             } else {
                 Color.gray
+                    .frame(width: 200, height: 200)
             }
         }
         .frame(width: attachment.imageWidth() * pixelLength,
