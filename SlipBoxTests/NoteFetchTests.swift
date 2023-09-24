@@ -63,124 +63,124 @@ final class NoteFetchTest: XCTestCase {
         XCTAssertTrue(retrievedNotes.contains(note2))
     }
 
-//    func test_search_multi_term_notes() {
-//        let note1 = Note(title: "Hello and World", context: context)
-//        let note2 = Note(title: "test more world", context: context)
+    func test_search_multi_term_notes() {
+        let note1 = Note(title: "Hello and World", context: context)
+        let note2 = Note(title: "test more world", context: context)
+
+        let searchTerms = ["Hello", "World", "and"]
+
+        var predicates = [NSPredicate]()
+        for term in searchTerms {
+            predicates.append(NSPredicate(format: "%K CONTAINS[cd] %@", NoteProperties.title, term as CVarArg))
+        }
+
+        let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
+        let request = Note.fetch(predicate)
+        let retrievedNotes = try! context.fetch(request)
+
+        XCTAssertTrue(retrievedNotes.count == 1)
+        XCTAssertTrue(retrievedNotes.contains(note1))
+        XCTAssertFalse(retrievedNotes.contains(note2))
+    }
+
+    func test_filter_by_notes_status_default_draft() {
+        let note1 = Note(title: "Hello and World", context: context)
+        let note2 = Note(title: "test more world", context: context)
+        let note3 = Note(title: "note 3", context: context)
+
+        let filterStatus = Status.draft
+
+        let predicate = NSPredicate(format: "%K == %@", NoteProperties.status, filterStatus.rawValue as CVarArg)
+        let request = Note.fetch(predicate)
+        let retrievedNotes = try! context.fetch(request)
+
+        XCTAssertTrue(retrievedNotes.count == 3)
+        XCTAssertTrue(retrievedNotes.contains(note1))
+        XCTAssertTrue(retrievedNotes.contains(note2))
+        XCTAssertTrue(retrievedNotes.contains(note3))
+    }
+
+    func test_filter_by_notes_status_archived() {
+        let note1 = Note(title: "Hello and World", context: context)
+        let note2 = Note(title: "test more world", context: context)
+        let note3 = Note(title: "note 3", context: context)
+        note3.status = .archived
+
+        let filterStatus = Status.archived
+
+        let predicate = NSPredicate(format: "%K == %@", NoteProperties.status, filterStatus.rawValue as CVarArg)
+        let request = Note.fetch(predicate)
+        let retrievedNotes = try! context.fetch(request)
+
+        XCTAssertTrue(retrievedNotes.count == 1)
+        XCTAssertFalse(retrievedNotes.contains(note1))
+        XCTAssertFalse(retrievedNotes.contains(note2))
+        XCTAssertTrue(retrievedNotes.contains(note3))
+    }
+
+    func test_search_for_favorite_notes() {
+        let note1 = Note(title: "Hello and World", context: context)
+        let note2 = Note(title: "test more world", context: context)
+        note2.isFavorite = true
+
+        let predicate = NSPredicate(format: "isFavorite == true")
+
+        let request = Note.fetch(predicate)
+        let retrievedNotes = try! context.fetch(request)
+
+        XCTAssertTrue(retrievedNotes.count == 1)
+        XCTAssertFalse(retrievedNotes.contains(note1))
+        XCTAssertTrue(retrievedNotes.contains(note2))
+    }
 //
-//        let searchTerms = ["Hello", "World", "and"]
-//
-//        var predicates = [NSPredicate]()
-//        for term in searchTerms {
-//            predicates.append(NSPredicate(format: "%K CONTAINS[cd] %@", NoteProperties.title, term as CVarArg))
-//        }
-//
-//        let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
-//        let request = Note.fetch(predicate)
-//        let retrievedNotes = try! context.fetch(request)
-//
-//        XCTAssertTrue(retrievedNotes.count == 1)
-//        XCTAssertTrue(retrievedNotes.contains(note1))
-//        XCTAssertFalse(retrievedNotes.contains(note2))
-//    }
-//
-//    func test_filter_by_notes_status_default_draft() {
-//        let note1 = Note(title: "Hello and World", context: context)
-//        let note2 = Note(title: "test more world", context: context)
-//        let note3 = Note(title: "note 3", context: context)
-//
-//        let filterStatus = Status.draft
-//
-//        let predicate = NSPredicate(format: "%K == %@", NoteProperties.status, filterStatus.rawValue as CVarArg)
-//        let request = Note.fetch(predicate)
-//        let retrievedNotes = try! context.fetch(request)
-//
-//        XCTAssertTrue(retrievedNotes.count == 3)
-//        XCTAssertTrue(retrievedNotes.contains(note1))
-//        XCTAssertTrue(retrievedNotes.contains(note2))
-//        XCTAssertTrue(retrievedNotes.contains(note3))
-//    }
-//
-//    func test_filter_by_notes_status_archived() {
-//        let note1 = Note(title: "Hello and World", context: context)
-//        let note2 = Note(title: "test more world", context: context)
-//        let note3 = Note(title: "note 3", context: context)
-//        note3.status = .archived
-//
-//        let filterStatus = Status.archived
-//
-//        let predicate = NSPredicate(format: "%K == %@", NoteProperties.status, filterStatus.rawValue as CVarArg)
-//        let request = Note.fetch(predicate)
-//        let retrievedNotes = try! context.fetch(request)
-//
-//        XCTAssertTrue(retrievedNotes.count == 1)
-//        XCTAssertFalse(retrievedNotes.contains(note1))
-//        XCTAssertFalse(retrievedNotes.contains(note2))
-//        XCTAssertTrue(retrievedNotes.contains(note3))
-//    }
-//
-//    func test_search_for_favorite_notes() {
-//        let note1 = Note(title: "Hello and World", context: context)
-//        let note2 = Note(title: "test more world", context: context)
-//        note2.isFavorite = true
-//
-//        let predicate = NSPredicate(format: "isFavorite == true")
-//
-//        let request = Note.fetch(predicate)
-//        let retrievedNotes = try! context.fetch(request)
-//
-//        XCTAssertTrue(retrievedNotes.count == 1)
-//        XCTAssertFalse(retrievedNotes.contains(note1))
-//        XCTAssertTrue(retrievedNotes.contains(note2))
-//    }
-//
-//    func test_fetch_notes_for_last_7_days() {
-//        let calendar = Calendar.current
-//
-//        let beginDate = calendar.date(byAdding: .day, value: -7, to: Date())!
-//
-//        let note1 = Note(title: "Hello and World", context: context)
-//        note1.creationDate_ = calendar.date(byAdding: .day, value: -2, to: Date())
-//        let note2 = Note(title: "test more world", context: context)
-//        note2.creationDate_ = calendar.date(byAdding: .day, value: -9, to: Date())
-//
-//        let predicate = NSPredicate(format: "%K < %@", NoteProperties.creationDate, beginDate as NSDate)
-//
-//        let request = Note.fetch(predicate)
-//        let retrievedNotes = try! context.fetch(request)
-//
-//        XCTAssertTrue(retrievedNotes.count == 1)
-//        XCTAssertFalse(retrievedNotes.contains(note1))
-//        XCTAssertTrue(retrievedNotes.contains(note2))
-//    }
-//
-//    func test_fetch_notes_of_last_week() {
-//        let calendar = Calendar.current
-//
-//        let today = Date(timeIntervalSince1970: 1670502427)
-//        print("today \(today.description(with: Locale(identifier: "ENG")))")
-//
-//        for index in 0..<7 {
-//            let note = Note(title: "", context: context)
-//            note.creationDate_ = calendar.date(byAdding: .day, value: -index, to: today)
-//            print("notes days \(note.creationDate.description(with: Locale(identifier: "ENG")))")
-//        }
-//
-//        let startOfWeek = calendar.dateComponents([.calendar, .yearForWeekOfYear, .weekOfYear], from: today).date!
-//        let endDate = calendar.date(byAdding: .day, value: 1, to: startOfWeek)!
-//
-//        print("startOfWeek \(endDate.description(with: Locale(identifier: "ENG")))")
-//
-//        let beginDate = calendar.date(byAdding: .day, value: -7, to: endDate)!
-//
-//        let predicate = NSPredicate(format: "creationDate_ > %@ AND creationDate_ <= %@",
-//                                    argumentArray: [beginDate, endDate])
-//
-//        let request = Note.fetch(predicate)
-//        let retrievedNotes = try! context.fetch(request)
-//
-//        XCTAssertTrue(retrievedNotes.count == 3)
-//
-//    }
+    func test_fetch_notes_for_last_7_days() {
+        let calendar = Calendar.current
+
+        let beginDate = calendar.date(byAdding: .day, value: -7, to: Date())!
+
+        let note1 = Note(title: "Hello and World", context: context)
+        note1.creationDate_ = calendar.date(byAdding: .day, value: -2, to: Date())
+        let note2 = Note(title: "test more world", context: context)
+        note2.creationDate_ = calendar.date(byAdding: .day, value: -9, to: Date())
+
+        let predicate = NSPredicate(format: "%K < %@", NoteProperties.creationDate, beginDate as NSDate)
+
+        let request = Note.fetch(predicate)
+        let retrievedNotes = try! context.fetch(request)
+
+        XCTAssertTrue(retrievedNotes.count == 1)
+        XCTAssertFalse(retrievedNotes.contains(note1))
+        XCTAssertTrue(retrievedNotes.contains(note2))
+    }
+
+    func test_fetch_notes_of_last_week() {
+        let calendar = Calendar.current
+
+        let today = Date(timeIntervalSince1970: 1670502427)
+        print("today \(today.description(with: Locale(identifier: "ENG")))")
+
+        for index in 0..<7 {
+            let note = Note(title: "", context: context)
+            note.creationDate_ = calendar.date(byAdding: .day, value: -index, to: today)
+            print("notes days \(note.creationDate.description(with: Locale(identifier: "ENG")))")
+        }
+
+        let startOfWeek = calendar.dateComponents([.calendar, .yearForWeekOfYear, .weekOfYear], from: today).date!
+        let endDate = calendar.date(byAdding: .day, value: 1, to: startOfWeek)!
+
+        print("startOfWeek \(endDate.description(with: Locale(identifier: "ENG")))")
+
+        let beginDate = calendar.date(byAdding: .day, value: -7, to: endDate)!
+
+        let predicate = NSPredicate(format: "creationDate_ > %@ AND creationDate_ <= %@",
+                                    argumentArray: [beginDate, endDate])
+
+        let request = Note.fetch(predicate)
+        let retrievedNotes = try! context.fetch(request)
+
+        XCTAssertTrue(retrievedNotes.count == 3)
+
+    }
 //
 //    func test_search_notes_for_folder() {
 //        let note1 = Note(title: "note", context: context)

@@ -36,6 +36,7 @@
 		76835AA32A5AC5260008F1C2 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76835AA22A5AC5260008F1C2 /* Status.swift */; };
 		76835AAB2A5B25C50008F1C2 /* NSAttributedString+Data+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76835AAA2A5B25C50008F1C2 /* NSAttributedString+Data+Helper.swift */; };
 		768DCDC82AC03D0500FB9EA5 /* NoteFetchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768DCDC72AC03D0500FB9EA5 /* NoteFetchTests.swift */; };
+		768DCDCA2AC04C3800FB9EA5 /* NSPredicateCheatsheet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 768DCDC92AC04C3800FB9EA5 /* NSPredicateCheatsheet.pdf */; };
 		769F28E32A9D2014000EBD56 /* Folder+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F28E22A9D2014000EBD56 /* Folder+Helper.swift */; };
 		769F28E72A9E8BA0000EBD56 /* FolderNotesrelationshipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F28E62A9E8BA0000EBD56 /* FolderNotesrelationshipTests.swift */; };
 		76ABEF942AA8F9FE002815F6 /* Atachment+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ABEF932AA8F9FE002815F6 /* Atachment+Helper.swift */; };
@@ -98,6 +99,7 @@
 		76835AA82A5B1CF30008F1C2 /* TextViewMacOsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewMacOsWrapper.swift; sourceTree = "<group>"; };
 		76835AAA2A5B25C50008F1C2 /* NSAttributedString+Data+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Data+Helper.swift"; sourceTree = "<group>"; };
 		768DCDC72AC03D0500FB9EA5 /* NoteFetchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteFetchTests.swift; sourceTree = "<group>"; };
+		768DCDC92AC04C3800FB9EA5 /* NSPredicateCheatsheet.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = NSPredicateCheatsheet.pdf; path = docs/NSPredicateCheatsheet.pdf; sourceTree = "<group>"; };
 		769F28E22A9D2014000EBD56 /* Folder+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+Helper.swift"; sourceTree = "<group>"; };
 		769F28E62A9E8BA0000EBD56 /* FolderNotesrelationshipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderNotesrelationshipTests.swift; sourceTree = "<group>"; };
 		76ABEF932AA8F9FE002815F6 /* Atachment+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Atachment+Helper.swift"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		76485E6B2A44DC6000F53AAE = {
 			isa = PBXGroup;
 			children = (
+				768DCDC92AC04C3800FB9EA5 /* NSPredicateCheatsheet.pdf */,
 				76485E762A44DC6000F53AAE /* SlipBox */,
 				76485E8D2A44DC6100F53AAE /* SlipBoxTests */,
 				76485E972A44DC6100F53AAE /* SlipBoxUITests */,
@@ -371,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76485E852A44DC6100F53AAE /* Preview Assets.xcassets in Resources */,
+				768DCDCA2AC04C3800FB9EA5 /* NSPredicateCheatsheet.pdf in Resources */,
 				76485E812A44DC6100F53AAE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
