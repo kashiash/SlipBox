@@ -83,14 +83,14 @@ extension Note {
     }
     func fetch()  -> NSFetchRequest<Note> {
         let request = NSFetchRequest<Note>(entityName: "Note")
-        request.sortDescriptors = [NSSortDescriptor(keyPath: \Note.creationDate, ascending: true)]
+        request.sortDescriptors = [NSSortDescriptor(keyPath: \Note.creationDate_, ascending: true)]
         request.predicate = NSPredicate(format: "TRUEPREDICATE")
         return request
     }
 
     static func fetch(_ predicate: NSPredicate = .all)  -> NSFetchRequest<Note> {
         let request = NSFetchRequest<Note>(entityName: "Note")
-        request.sortDescriptors = [NSSortDescriptor(keyPath: \Note.creationDate, ascending: true)]
+        request.sortDescriptors = [NSSortDescriptor(keyPath: \Note.creationDate_, ascending: true)]
         request.predicate = predicate
 
         return request
@@ -107,4 +107,16 @@ extension Note: Comparable {
     }
 
 
+}
+
+//MARK: - define my string constants
+
+struct NoteProperties {
+    static let title = "title_"
+    static let bodyText = "bodyText_"
+    static let status = "status_"
+    static let creationDate = "creationDate_"
+
+    static let folder = "folder"
+    static let keywords = "keywords_"
 }

@@ -327,3 +327,66 @@ Jak usunąć mój folder podrzędny? Okej, to jest wyraźnie nie to, czego chcia
 ```
 
  Muszę najpierw dodać kilka podfolderów. Teraz usuwanie tego usuwa właściwy folder, a jeśli usunę ten, to usuwa również podfoldery razem ze względu na nasze reguły usuwania. Teraz zmieniam widok listy folderów, aby pokazywać te zagnieżdżone foldery, zaczynając od najwyższych folderów, które do tej pory nie mają rodzica. Następnie musieliśmy zmienić listę, którą pokazujemy, ponieważ teraz muszę także pokazać podfoldery w zagnieżdżeniu, zamiast korzystać z istniejącego widoku SwiftUI do listy dzieci. Stworzyłem tu własną grupę ujawniającą, swoją własną listę z jej dziećmi, tworząc widok rekurencyjnego folderu, w którym rekurencyjnie wywołuję sam siebie, czyli ten widok rekurencyjnego folderu dla każdego z dzieci. Aby to działało z resztą, musiałem także dodać tutaj funkcję usuwania i trochę więcej tych menu, abyśmy mieli sposób na tworzenie, w rzeczywistości, podfolderów na razie. Jedna zmiana, którą wprowadziłem do tego żądania dla najwyższego folderu, jest właściwie bardzo prosta, lub co najmniej zmieniłem niewiele kodu, który jest tutaj, tworząc nowe NSPredicate, gdzie mówię, że rodzic moich folderów powinien być null. Musiałem jednak znacznie więcej pracy, aby zaktualizować swoje UI. 
+
+calu kod widoku :
+
+
+
+```swift
+
+import SwiftUI
+
+struct FolderListView: View {
+
+    @Environment(\.managedObjectContext) var context
+    @FetchRequest(fetchRequest: Folder.fetchTopFolders()) private var folders: FetchedResults<Folder>
+
+    @Binding var selectedFolder: Folder?
+
+    var body: some View {
+        Group{
+
+
+            List(selection: $selectedFolder) {
+                ForEach(folders) { folder in
+                        RecursiveFolderView(folder: folder)
+                }
+                .onDelete(perform: deleteFolders(offsets:))
+
+            }}
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button {
+
+                    let newFolder = Folder(name: "new Folder", context: context)
+                    selectedFolder = newFolder
+
+                } label: {
+                    Label("Create new folder", systemImage: "folder.badge.plus")
+                }
+
+            }
+        }
+    }
+    private func deleteFolders(offsets: IndexSet) {
+        offsets.map { folders[$0] }.forEach(Folder.delete(_:))
+    }
+}
+
+struct FolderListView_Previews: PreviewProvider {
+    static var previews: some View {
+
+        let context = PersistenceController.createEmptyStore().container.viewContext
+
+        let nestedFolder = Folder.nestedFolderExample(context: context)
+        _ = Folder(name: "Second folder", context: context)
+       return  NavigationView{
+            FolderListView(selectedFolder: .constant(nestedFolder))
+                .environment(\.managedObjectContext, context)
+        }
+    }
+}
+
+```
+
+ 
