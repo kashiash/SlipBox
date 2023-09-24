@@ -55,6 +55,23 @@ extension Folder {
         guard let context = folder.managedObjectContext else { return }
         context.delete(folder)
     }
+
+
+    static func nestedFolderExample(context: NSManagedObjectContext) -> Folder {
+        let parent = Folder(name: "parent", context: context)
+        let child1 = Folder(name: "child1", context: context)
+        parent.subfolders.insert(child1)
+        let child2 = Folder(name: "child2", context: context)
+        parent.subfolders.insert(child2)
+        let child1_2 = Folder(name: "child1_2", context: context)
+        child1.subfolders.insert(child1_2)
+        let child1_1 = Folder(name: "child1_1", context: context)
+        child1.subfolders.insert(child1_1)
+        let child1_2_1 = Folder(name: "child1_2_1", context: context)
+        child1_2.subfolders.insert(child1_2_1)
+
+        return parent
+    }
 }
 
 extension Folder: Comparable {

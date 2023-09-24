@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FolderRow: View {
-
+    @Environment(\.managedObjectContext) var viewContext
     @ObservedObject var folder: Folder
 
     @State private var showRenameEditor: Bool = false
@@ -28,12 +28,15 @@ struct FolderRow: View {
             .contextMenu {
 
                 Button("Rename") {
-                    #if os(OSX)
-                    textFieldIsSelected = true
-                    #else
-                    showRenameEditor = true
-                    #endif
+                    startRenameAction()
                 }
+
+                Button("Add subfolder"){
+                    let subfolder = Folder(name: "new subsfolder", context: viewContext)
+                    folder.subfolders.insert(subfolder)
+                }
+
+                Divider()
 
                 Button("Delete") {
                    showDeleteConfirmation = true
@@ -48,11 +51,19 @@ struct FolderRow: View {
                 FolderEditorView(folder: folder)
             }
     }
+
+    func startRenameAction() {
+        #if os(OSX)
+        textFieldIsSelected = true
+        #else
+        showRenameEditor = true
+        #endif
+    }
 }
 
 struct FolderRow_Previews: PreviewProvider {
     static var previews: some View {
-        FolderRow(folder: Folder(name: "new", context: PersistenceController.preview.container.viewContext))
+        FolderRow(folder: Folder(name: "new folder", context: PersistenceController.preview.container.viewContext))
 
             .frame(width: 200)
             .padding(50)
